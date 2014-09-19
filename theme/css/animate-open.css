@@ -6,3 +6,15 @@
 	height: 400px;
 	margin: 40px auto 10px auto;
 }
+.pages {
+	height: 100%;
+}
+.page {
+	position: absolute;
+	background-color: red;
+}
+.header,
+.content,
+.footer {
+	border: solid 1px solid;
+}
