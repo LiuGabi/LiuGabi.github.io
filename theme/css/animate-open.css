@@ -1,0 +1,8 @@
+.wrapper {
+	margin: auto;
+}
+.book {
+	width: 600px;
+	height: 400px;
+	margin: 40px auto 10px auto;
+}
