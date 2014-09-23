@@ -8,6 +8,10 @@
 	margin: 0 auto;
 	padding: 0 12px;
 }
+#logo {
+	float: left;
+	padding: 0 20px 0 0;
+}
 #nav {
 	margin: 0 240px 0 20px;
 	color: #777;
