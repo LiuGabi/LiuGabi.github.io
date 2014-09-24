@@ -182,13 +182,13 @@ body {
 }
  
 .page-1 .header {
-  -webkit-animation: page-even-header 2s infinite ease-in;
+  -webkit-animation: page-even-header 10s infinite ease-in;
 }
 
 .page-2 .header {
-  	-webkit-animation: page-odd-header 2s infinite ease-out;
+  	-webkit-animation: page-odd-header 10s infinite ease-out;
 }
  
 .page-1 .content {
-  -webkit-animation: page-even-content 2s infinite ease-in;
+  -webkit-animation: page-even-content 10s infinite ease-in;
 }
