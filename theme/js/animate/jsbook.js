@@ -18,17 +18,26 @@ $(function() {
 	$("#forward").click(function(e) {
 
 		// current action page and next page
-		var first = pages.not(".odd-action,.even-action").first(),
-			second = first.next();
-		
-		if(first.not(".cover")) {
+		var current = pages.not(".odd-action,.even-action").first(),
+			next = current.next(),
+			prev = current.prev();
 
+		// layout z-index
+		var zIndex = 0;
+
+		if (prev.css("z-index")) {
+			zIndex = prev.css("z-index") - 1;
 		}
 
-		first.addClass("odd-action");
-		second.show();
-		second.addClass("even-action");
-		first.hide();
+		prev.css("z-index",zIndex);
+		
+		if(current.not(".cover")) {
+
+		}
+		
+		current.addClass("odd-action");
+
+		next.addClass("even-action");
 
 	});
 

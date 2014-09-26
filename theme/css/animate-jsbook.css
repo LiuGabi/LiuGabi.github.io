@@ -25,16 +25,13 @@ body {
   	top: 0;
 }
 
-.page-even {
-	display: none;
-}
-
 .page-odd {
   	padding-left: 50%;
 }
  
 .page-even {
 	padding-right: 50%;
+	-webkit-transform: rotateY(90deg)
 }
 
 .header,
@@ -66,24 +63,28 @@ body {
   	border-top: none;
 }
  
-.cover {
+.page-odd.cover {
 	z-index: 300;
 }
 
-.directory {
-	z-index: 299;
+.page-even.directory {
+	z-index: 300;
 }
 
-.page-1  {
-	z-index:260;
+.page-odd.page-1  {
+	z-index:299;
 }
  
-.page-2 {
-	z-index:259;
+.page-even.page-2 {
+	z-index:299;
 }
 
-.back-cover {
-	z-index: 50;
+.page-even.page-3 {
+	z-index:298;
+}
+
+.page-odd.back-cover {
+	z-index: 298;
 }
 
 
@@ -118,6 +119,14 @@ body {
 	}
 }
  
+/*.odd-action {
+	-webkit-animation: 3s page-odd ease-out forwards;
+}
+
+.even-action {
+	-webkit-animation: 3s page-even ease-out forwards;
+}*/
+
 .odd-action {
 	-webkit-animation: 3s page-odd ease-out forwards;
 }
