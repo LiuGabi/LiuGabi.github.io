@@ -25,6 +25,10 @@ body {
   	top: 0;
 }
 
+.page-even {
+	display: none;
+}
+
 .page-odd {
   	padding-left: 50%;
 }
@@ -114,11 +118,11 @@ body {
 	}
 }
  
-.forward {
-	-webkit-animation: 10s page-odd ease-out forwards;
+.odd-action {
+	-webkit-animation: 3s page-odd ease-out forwards;
 }
 
-.back {
-	-webkit-animation: 10s page-even ease-out forwards;
+.even-action {
+	-webkit-animation: 3s page-even ease-out forwards;
 }
 /* open book animation end */

@@ -5,17 +5,28 @@ $(function() {
 	 back-cover
 	 directory
 	 page-number
+
+	 question:layout
+	 question:odd even
 	 */
 
-	$("#forward").click(function(e) {
-		
-		var pages = $(".page").not(".forward,.back");
+	 // all pages in the book
+		var pages = $(".page");
+		var oddPages =pages.has(".page-odd");
+		var evenPages = pages.has(".page-even");
 
-		var first = pages.first(),
-			second = pages.eq(1);
+	$("#forward").click(function(e) {
+
+		// current action page and next page
+		var first = pages.not(".odd-action,.even-action").first(),
+			second = first.next();
 		
-		first.addClass("forward");
-		second.addClass("back");
+		if(first.not(".cover")) {
+
+		}
+
+		first.addClass("odd-action");
+		second.addClass("even-action");
 
 	});
 
