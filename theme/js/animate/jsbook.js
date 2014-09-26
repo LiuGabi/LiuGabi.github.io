@@ -26,7 +26,9 @@ $(function() {
 		}
 
 		first.addClass("odd-action");
+		second.show();
 		second.addClass("even-action");
+		first.hide();
 
 	});
 
