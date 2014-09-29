@@ -39,21 +39,23 @@ $(function() {
 	$("#back").click(function(e) {
 
 		// current action page and next page
-		var current = pages.filter(".odd-action,.even-action").first(),
-			prev = current.prev(),
-			nextOdd = current.next(),
-			nextEven = nextOdd.next();
+		var current = pages.filter(".odd-action,.even-action").last();
+		var	prev = current.prev();
+		var	nextOdd = current.next();
+		var	nextEven = nextOdd.next();
 
 		// layout z-index
 		var zIndex = 0;
 
-		zIndex = 300 - parseInt(current.css("z-index")) + 1;
+		zIndex = parseInt(current.css("z-index")) + 1;
 
 		nextOdd.css("z-index",zIndex);
-		nextEven.css("z-index",zIndex + 1);
+		nextEven.css("z-index",zIndex - 1);
 
 		current.removeClass("even-action"); 
 		prev.removeClass("odd-action");
+		current.addClass("even-actionb"); 
+		prev.addClass("odd-actionb");
 
 	});
 

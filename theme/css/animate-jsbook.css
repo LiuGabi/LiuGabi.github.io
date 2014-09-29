@@ -125,6 +125,36 @@ body {
 		-webkit-transform: rotateY(0deg);
 	}
 }
+
+@-webkit-keyframes page-evenb {
+	0% {
+		-webkit-transform: rotateY(0deg);
+	}
+	50% {
+		-webkit-transform: rotateY(0deg);
+	}
+	75% {
+		-webkit-transform: rotateY(-90deg);
+	}
+	100% {
+		-webkit-transform: rotateY(-90deg);
+	}
+}
+
+@-webkit-keyframes page-oddb {
+	0% {
+		-webkit-transform: rotateY(-90deg);
+	}
+	50% {
+		-webkit-transform: rotateY(-90deg);
+	}
+	75% {
+		-webkit-transform: rotateY(0deg);
+	}
+	100% {
+		-webkit-transform: rotateY(0deg);
+	}
+}
  
 /*.odd-action {
 	-webkit-animation: 3s page-odd ease-out forwards;
@@ -140,6 +170,14 @@ body {
 
 .even-action {
 	-webkit-animation: 3s page-even ease-out forwards;
+}
+
+.odd-actionb {
+	-webkit-animation: 3s page-oddb ease-out forwards;
+}
+
+.even-actionb {
+	-webkit-animation: 3s page-evenb ease-out forwards;
 }
 /* open book animation end */
 
