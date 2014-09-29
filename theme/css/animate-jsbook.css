@@ -64,34 +64,34 @@ body {
 }
  
 .page-odd.cover {
-	z-index: 300;
+	z-index: 8;
 }
 
 .page-even.directory {
-	z-index: 299;
+	z-index: 7;
 }
 
 .page-odd.page-1  {
-	z-index:298;
+	z-index:6;
 }
  
 .page-even.page-2 {
-	z-index:297;
+	z-index:5;
 }
 
 .page-odd.page-3 {
-	z-index:296;
+	z-index:4;
 }
 .page-even.page-4 {
-	z-index:295;
+	z-index:3;
 }
 
 .page-odd.page-5 {
-	z-index:294;
+	z-index:2;
 }
 
 .page-even.back-cover {
-	z-index: 293;
+	z-index: 1;
 }
 
 
@@ -149,7 +149,7 @@ body {
 		-webkit-transform: rotateY(-90deg);
 	}
 	75% {
-		-webkit-transform: rotateY(0deg);
+		-webkit-transform: rotateY(-90deg);
 	}
 	100% {
 		-webkit-transform: rotateY(0deg);
@@ -165,19 +165,19 @@ body {
 }*/
 
 .odd-action {
-	-webkit-animation: 3s page-odd ease-out forwards;
+	-webkit-animation: 2s page-odd ease-out forwards;
 }
 
 .even-action {
-	-webkit-animation: 3s page-even ease-out forwards;
+	-webkit-animation: 2s page-even ease-out forwards;
 }
 
 .odd-actionb {
-	-webkit-animation: 3s page-oddb ease-out forwards;
+	-webkit-animation: 2s page-oddb ease-out forwards;
 }
 
 .even-actionb {
-	-webkit-animation: 3s page-evenb ease-out forwards;
+	-webkit-animation: 2s page-evenb ease-out forwards;
 }
 /* open book animation end */
 

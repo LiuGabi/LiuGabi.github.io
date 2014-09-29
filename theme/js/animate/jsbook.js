@@ -26,13 +26,20 @@ $(function() {
 		// layout z-index
 		var zIndex = 0;
 
-		zIndex = 300 - parseInt(current.css("z-index")) - 1;
+		zIndex = pages.length - parseInt(current.css("z-index")) - 1;
 
 		prevOdd.css("z-index",zIndex);
 		prevEven.css("z-index",zIndex + 1);
 
+		current.removeClass("odd-actionb"); 
+		next.removeClass("even-actionb");
 		current.addClass("odd-action"); 
 		next.addClass("even-action");
+
+		if (current.is(pages.last().prev())) {
+			current.css("z-index",7);
+			next.css("z-index",8);
+		}
 
 	});
 
@@ -47,7 +54,7 @@ $(function() {
 		// layout z-index
 		var zIndex = 0;
 
-		zIndex = parseInt(current.css("z-index")) + 1;
+		zIndex = pages.length - parseInt(current.css("z-index"));
 
 		nextOdd.css("z-index",zIndex);
 		nextEven.css("z-index",zIndex - 1);
@@ -56,6 +63,11 @@ $(function() {
 		prev.removeClass("odd-action");
 		current.addClass("even-actionb"); 
 		prev.addClass("odd-actionb");
+
+		if (current.is(pages.first().next())) {
+			current.css("z-index",7);
+			prev.css("z-index",8);
+		}
 
 	});
 
