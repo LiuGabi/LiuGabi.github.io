@@ -68,23 +68,30 @@ body {
 }
 
 .page-even.directory {
-	z-index: 300;
+	z-index: 299;
 }
 
 .page-odd.page-1  {
-	z-index:299;
+	z-index:298;
 }
  
 .page-even.page-2 {
-	z-index:299;
+	z-index:297;
 }
 
-.page-even.page-3 {
-	z-index:298;
+.page-odd.page-3 {
+	z-index:296;
+}
+.page-even.page-4 {
+	z-index:295;
 }
 
-.page-odd.back-cover {
-	z-index: 298;
+.page-odd.page-5 {
+	z-index:294;
+}
+
+.page-even.back-cover {
+	z-index: 293;
 }
 
 
@@ -135,3 +142,18 @@ body {
 	-webkit-animation: 3s page-even ease-out forwards;
 }
 /* open book animation end */
+
+/* botton */
+#forward,
+#back {
+	padding: 10px;
+	cursor: pointer;
+}
+#forward {
+	background-color: red;
+}
+#back {
+	background-color: blue;
+}
+
+/* botton */

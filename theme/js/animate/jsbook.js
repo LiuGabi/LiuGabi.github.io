@@ -12,33 +12,48 @@ $(function() {
 
 	 // all pages in the book
 		var pages = $(".page");
-		var oddPages =pages.has(".page-odd");
-		var evenPages = pages.has(".page-even");
+
+		// for()
 
 	$("#forward").click(function(e) {
 
 		// current action page and next page
 		var current = pages.not(".odd-action,.even-action").first(),
 			next = current.next(),
-			prev = current.prev(),
-			last = pages.last();
+			prevEven = current.prev(),
+			prevOdd = prevEven.prev();
 
 		// layout z-index
 		var zIndex = 0;
 
-		if (prev.css("z-index")) {
-			zIndex = prev.css("z-index") - last.css("z-index");
-		}
+		zIndex = 300 - parseInt(current.css("z-index")) - 1;
 
-		prev.css("z-index",zIndex);
-		
-		if(current.not(".cover")) {
+		prevOdd.css("z-index",zIndex);
+		prevEven.css("z-index",zIndex + 1);
 
-		}
-		
-		current.addClass("odd-action");
-
+		current.addClass("odd-action"); 
 		next.addClass("even-action");
+
+	});
+
+	$("#back").click(function(e) {
+
+		// current action page and next page
+		var current = pages.filter(".odd-action,.even-action").first(),
+			prev = current.prev(),
+			nextOdd = current.next(),
+			nextEven = nextOdd.next();
+
+		// layout z-index
+		var zIndex = 0;
+
+		zIndex = 300 - parseInt(current.css("z-index")) + 1;
+
+		nextOdd.css("z-index",zIndex);
+		nextEven.css("z-index",zIndex + 1);
+
+		current.removeClass("even-action"); 
+		prev.removeClass("odd-action");
 
 	});
 
