@@ -3,12 +3,12 @@ body {
 }
 .wrapper {
   	margin: auto;
- 	width: 1210px;
+ 	width: 610px;
 }
  
 .book {
-  	width: 1200px;
-  	height: 800px;
+  	width: 600px;
+  	height: 400px;
   	margin: 40px auto 10px auto;
 }
  
@@ -19,24 +19,21 @@ body {
 }
  
 .page {
+	width: 50%;
   	position: absolute;
   	left: 0;
   	top: 0;
+  	padding-left: 50%;
 }
 
-.page-odd ,
-.page-even {
-	width: 50%;
-}
- 
 .page-odd {
-	padding-right: 50%;
-}
-
-.page-even {
   	padding-left: 50%;
 }
  
+.page-even {
+	padding-right: 50%;
+}
+
 .header,
 .content,
 .footer {
@@ -54,7 +51,7 @@ body {
 }
  
 .content {
-  	height: 750px;
+  	height: 328px;
   	padding: 0 30px 20px 30px;
   	border-top: none;
   	border-bottom: none;
@@ -63,19 +60,27 @@ body {
  
 .footer {
   	height: 20px;
-  	margin-top: -3px;
-  	border-bottom: none;
-  	opacity: 0.8;
-}
-
-.page-odd .header,
-.page-odd .footer,
-.page-even .header,
-.page-even .footer {
-  	-webkit-border-top-right-radius: 100px 3px;
-  	-webkit-border-top-left-radius: 100px 3px;
+  	border-top: none;
 }
  
+.cover {
+	z-index: 300;
+}
+
+.page-1  {
+	z-index:260;
+}
+ 
+.page-2 {
+	z-index:259;
+}
+
+.back-cover {
+	z-index: 50;
+}
+
+
+/* open book animation beg */
 @-webkit-keyframes page-even {
 	0% {
 		-webkit-transform: rotateY(0deg);
@@ -108,87 +113,10 @@ body {
 		-webkit-transform: rotateY(0deg);
 	}
 }
- 
-@-webkit-keyframes page-even-header {
-	0% {
-
-	}
-	50% {
-		height: 30px;
-		margin-top: 0;
-		-webkit-border-top-left-radius: 100px 3px;
-	}
-	75% {
-		height: 50px;
-		margin-top: -25px;
-		-webkit-border-top-left-radius: 300px 40px;
-		-webkit-border-top-right-radius: 80px 40px;
-	}
-	100% {
-
-	}
+.forward {
+	-webkit-animation: 3s page-odd ease-in;
 }
- 
-@-webkit-keyframes page-odd-header {
-	0% {
-
-	}
-	50% {
-
-	}
-
-	75% {
-		height: 50px;
-		margin-top: -25px;
-		-webkit-border-top-left-radius: 80px 40px;
-		-webkit-border-top-right-radius: 300px 40px;
-	}
-	100% {
-		height: 30px;
-		margin-top: 0;
-		-webkit-border-top-right-radius: 100px 3px;
-	}
+.back {
+	-webkit-animation: 3s page-odd ease-out;
 }
- 
-@-webkit-keyframes page-even-content {
-	0% {
-	}
-	50% {
-		color: #000;
-	}
-	75% {
-		color: #ccc;
-	}
-	100% {
-	}
-}
- 
-.page-1  {
-	z-index:9999;
-  -webkit-animation: page-even 10s infinite ease-out;
-}
- 
-.page-2 {
-	z-index:9998;
-  	-webkit-animation: page-odd 10s infinite ease-out;
-}
- 
-.page-3 {
-	z-index:9997;
-}
-.page-4 {
-	z-index: 9996;
-  	-webkit-box-shadow: 0 10px 20px #666;
-}
- 
-.page-1 .header {
-  -webkit-animation: page-even-header 10s infinite ease-in;
-}
-
-.page-2 .header {
-  	-webkit-animation: page-odd-header 10s infinite ease-out;
-}
- 
-.page-1 .content {
-  -webkit-animation: page-even-content 10s infinite ease-in;
-}
+/* open book animation end */
