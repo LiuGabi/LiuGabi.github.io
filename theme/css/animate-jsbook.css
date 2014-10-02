@@ -23,7 +23,6 @@ body {
   	position: absolute;
   	left: 0;
   	top: 0;
-  	padding-left: 50%;
 }
 
 .page-odd {
@@ -93,10 +92,10 @@ body {
 		-webkit-transform: rotateY(0deg);
 	}
 	75% {
-		-webkit-transform: rotateY(0deg);
+		-webkit-transform: rotateY(90deg);
 	}
 	100% {
-		-webkit-transform: rotateY(180deg);
+		-webkit-transform: rotateY(90deg);
 	}
 }
 
@@ -118,7 +117,8 @@ body {
 .forward {
 	-webkit-animation: 10s page-odd ease-out forwards;
 }
+
 .back {
-	-webkit-animation: 10s page-even ease-out;
+	-webkit-animation: 10s page-even ease-out forwards;
 }
 /* open book animation end */
