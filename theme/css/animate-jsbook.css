@@ -116,7 +116,7 @@ body {
 }
  
 .forward {
-	-webkit-animation: 10s page-odd ease-out;
+	-webkit-animation: 10s page-odd ease-out forwards;
 }
 .back {
 	-webkit-animation: 10s page-even ease-out;
