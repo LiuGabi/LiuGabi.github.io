@@ -1,10 +1,9 @@
-#magazine{
-    width: 800px;
-    height: 400px;
-}
-#magazine .turn-page{
-    background-color:red;
+#flipbook{
+	position: relative;
+	width: 800px;
+	height: 600px;
+	margin: 10px auto;
 }
 .page {
-	background-color: red;
+	background-color: pink;
 }

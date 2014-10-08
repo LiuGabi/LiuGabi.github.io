@@ -9,7 +9,7 @@
 <title>JS BOOK</title>
 </head>
 <body>
-<div id="magazine">
+<div id="flipbook">
     <div><span class="text">Page 1</span></div>
     <div><span class="text">Page 2</span></div>
     <div><span class="text">Page 3</span></div>
@@ -19,9 +19,11 @@
 <script src="../theme/js/jquery-1.11.1.min.js"></script>
 <script src="../theme/js/animate/turn.js"></script>
 <script>
-	$('#magazine').turn({gradients: true, acceleration: true});
+	$('#flipbook').turn({
+		gradients: true,
+		acceleration: true
+	});
 </script>
-<!-- <script src="../theme/js/animate/jsbook.js"></script> -->
 </body>
 </html>
  
