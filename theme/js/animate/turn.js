@@ -9,7 +9,7 @@
 
 (function($) {
 
-'use strict';
+'use strict';// 使用严格模式
 
 var has3d,
   
@@ -23,7 +23,7 @@ var has3d,
 
   A90 = PI/2,
 
-  isTouch = 'ontouchstart' in window,
+  isTouch = 'ontouchstart' in window,// 判断浏览器是否有ontouchstart方法
 
   mouseEvents = (isTouch) ?
     {
