@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="css/base.css">
 <link rel="stylesheet" type="text/css" href="css/common.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <link href="../theme/images/icon/logo.ico" rel="icon" />
@@ -12,18 +11,178 @@
 </head>
 <body>
 	<div id="wrapper">
-		<header id="header">
+		<div id="header">
 		    <div id="logo">
 		        <a href="/" title="eyebuydirect">
 		            <img src="images/logo-new.png" alt="EBD Admin">
 		        </a>
 		    </div>
-		</header>
+		    <div id="search">
+		    	<form>
+		    		<span class="out-text">
+		    			<input type="text" name="" class="search-text" placeholder="Search...">
+		    			<i class="fa fa-caret-down"></i>
+		    		</span>
+		    		<button class="blue">
+		    			<i class="fa fa-search"></i>
+		    		</button>
+		    		<ul class="advanced-search">
+		    			<li>Search
+		    				<span class="button">All Mail <i class="fa fa-caret-down"></i></span>
+		    				<dl class="query-select">
+	    						<dt>All Mail</dt>
+	    						<dt>Inbox</dt>
+	    						<dt>Starred</dt>
+	    						<dt></dt>
+	    					</dl>
+		    			</li>
+		    			<li>
+		    				<div>From</div>
+		    				<input type="text" class="form-control">
+		    			</li>
+		    			<li>
+		    				<div>To</div>
+		    				<input type="text" class="form-control">
+		    			</li>
+		    			<li>
+		    				<div>Subject</div>
+		    				<input type="text" class="form-control">
+		    			</li>
+		    			<li>
+		    				<div>Has the words</div>
+		    				<input type="text" class="form-control">
+		    			</li>
+		    			<li>
+		    				<div>Doesn't have</div>
+		    				<input type="text" class="form-control">
+		    			</li>
+		    			<li>
+		    				<button class="blue">
+		    					<i class="fa fa-search"></i>
+		    				</button>
+		    			</li>	
+		    		</ul>
+		    	</form>
+		    </div>
+		    <ul id="shortcut">
+		    	<li>
+		    		<a href="#">Gabi
+		    			<small>(gabi@eyebuydirect.com)</small>
+		    		</a>
+		    	</li>
+		    	<li>
+		    		<a href="#">Setting</a>
+		    	</li>
+		    	<li>
+		    		<a href="#">Sign out</a>
+		    	</li>
+		    </ul>
+		</div>
 		<div id="container">
-			<div id="sidebar">sidebar</div>
+			<div id="sidebar">
+				<ul>
+					<li>
+						<a href="#" class="buttom">Take Task</a>
+					</li>
+					<li>
+						<a href="#">My Box (10)</a>
+					</li>
+					<li>
+						<a href="#">Roll Out (2)</a>
+					</li>
+					<li>
+						<a href="#">Forward Task (10)</a>
+					</li>
+					<li>
+						<a href="#" class="buttom">New Message</a>
+					</li>
+					<li>
+						<a href="#">Inbox (350)</a>
+					</li>
+					<li>
+						<a href="#">Starred</a>
+					</li>
+					<li>
+						<a href="#">Sent</a>
+					</li>
+					<li>
+						<a href="#">Drafts</a>
+					</li>
+					<li>
+						<a href="#">Spam</a>
+					</li>
+					<li>
+						<a href="#">Trash</a>
+					</li>
+				</ul>
+			</div>
 			<div id="content-wrapper">
-				<div class="mail-list">
-					ff
+				<div class="mail-wrapper">
+					<div class="toolbar">
+						<span class="group">
+							<div class="button">Mark As
+								<i class="fa fa-caret-down"></i>
+							</div>
+							<ul class="dropdown">
+								<li>read</li>
+								<li>unread</li>
+								<li>star</li>
+								<li>unstar</li>
+							</ul>
+						</span>
+						<span class="group">
+							<div class="button">Move To
+								<i class="fa fa-caret-down"></i>
+							</div>
+							<ul class="dropdown">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</span>
+						<span class="group">
+							<div class="button">More
+								<i class="fa fa-caret-down"></i>
+							</div>
+							<ul class="dropdown">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</span>
+						<span class="group">
+							<div class="button">Delete
+								<i class="fa fa-caret-down"></i>
+							</div>
+							<ul class="dropdown">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</span>
+					</div>
+					<div class="list-wrapper ">
+						<div class="title">
+							<span>
+								<strong>From</strong>
+							</span>
+							<span>
+								<strong>Subject</strong>
+							</span>
+							<span>
+								<strong>Owner</strong>
+							</span>
+							<span>
+								<strong>Date</strong>
+							</span>
+						</div>
+						<div class="list">
+							<span></span>
+						</div>
+					</div>
 				</div>
 				<div class="mail-detail">
 					ff
