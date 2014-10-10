@@ -82,7 +82,7 @@
 			<div id="sidebar">
 				<ul>
 					<li>
-						<a href="#" class="buttom">Take Task</a>
+						<button class="red">Take Task</button>
 					</li>
 					<li>
 						<a href="#">My Box (10)</a>
@@ -165,27 +165,141 @@
 						</span>
 					</div>
 					<div class="list-wrapper ">
-						<div class="title">
-							<span>
-								<strong>From</strong>
-							</span>
-							<span>
-								<strong>Subject</strong>
-							</span>
-							<span>
-								<strong>Owner</strong>
-							</span>
-							<span>
-								<strong>Date</strong>
-							</span>
+						<div class="table">
+							<div class="tr title">
+								<div class="col-1"></div>
+								<div class="col-1"></div>
+								<div class="col-3">
+									<strong>From</strong>
+								</div>
+								<div class="col-1"></div>
+								<div class="col-14">
+									<strong>Subject</strong>
+								</div>
+								<div class="col-2">
+									<strong>Owner</strong>
+								</div>
+								<div class="col-2">
+									<strong>Date</strong>
+								</div>
+							</div>
+							<div class="tr">
+								<div class="col-1">
+									<span class="checkbox">
+										<input type="checkbox">
+									</span>
+								</div>
+								<div class="col-1">
+									<span class="bookmark">
+										<i class="fa fa-bookmark"></i>
+									</span>
+								</div>
+								<div class="col-3">
+									<span class="from">
+										Bella Gao
+									</span>
+								</div>
+								<div class="col-1">
+									<span class="star">
+										<i class="fa fa-star-o"></i>
+									</span>
+								</div>
+								<div class="col-14">
+									<div class="subject">
+										Developer Blog Weekly Digest for 
+									</div>
+									<div class="info">Harry already updated the new</div>
+								</div>
+								<div class="col-2">
+									<div class="owner">
+										Harry
+										<br>
+										<i class="fa fa-long-arrow-down"></i>
+										<br>
+										Gabi
+									</div>
+								</div>
+								<div class="col-2">
+									<span class="date">
+										Oct 7
+									</span>
+								</div>
+							</div>
+							<div class="tr selected">
+								<div class="col-1">
+									<span class="checkbox">
+										<input type="checkbox">
+									</span>
+								</div>
+								<div class="col-1">
+									<span class="bookmark">
+										<i class="fa fa-bookmark-o"></i>
+									</span>
+								</div>
+								<div class="col-3">
+									<span class="from">
+										Bella Gao
+									</span>
+								</div>
+								<div class="col-1">
+									<span class="star">
+										<i class="fa fa-star"></i>
+									</span>
+								</div>
+								<div class="col-14">
+									<div class="subject">
+										Developer Blog Weekly Digest for 
+									</div>
+									<div class="info">Harry already updated the new</div>
+								</div>
+								<div class="col-2">
+									<div class="owner">
+										Harry
+										<br>
+										<i class="fa fa-long-arrow-down"></i>
+										<br>
+										Gabi
+									</div>
+								</div>
+								<div class="col-2">
+									<span class="date">
+										Oct 7
+									</span>
+								</div>
+							</div>
 						</div>
-						<div class="list">
-							<span></span>
-						</div>
+					</div>
+					<div class="pagination">
+					    <select class="pagesize">
+					        <option>10</option>
+					        <option>20</option>
+					        <option>50</option>
+					        <option>100</option>
+					    </select>
+					    <div class="pages">
+					    	<span class="current">1</span>
+                            <a href="/product/?page=2">2</a>
+                            <a href="/product/?page=3">3</a>
+                            <a href="/product/?page=4">4</a>
+                            <a href="/product/?page=5">5</a>
+                            <a href="/product/?page=6">6</a>
+                            <a href="/product/?page=7">7</a>
+                            <span class="separator">...</span>
+                            <a href="/product/?page=439">439</a>
+                            <a class="next" href="/product/?page=2">Next»</a>
+					    </div>
+					    <span class="records">Total: <em>8769</em></span>
 					</div>
 				</div>
 				<div class="mail-detail">
-					ff
+					<div class="subject">
+						<span >Re: Test Email for Aug. newsletter</span>
+						<span class="button tag">Inbox
+							<small>
+								<i class="fa fa-close"></i>
+							</small>
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
