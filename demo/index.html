@@ -21,43 +21,48 @@
 		    	<form>
 		    		<span class="out-text">
 		    			<input type="text" name="" class="search-text" placeholder="Search...">
-		    			<i class="fa fa-caret-down"></i>
+		    			<span class="cursor-hand">
+		    				<i class="fa fa-caret-down"></i>
+		    			</span>
 		    		</span>
-		    		<button class="blue">
+		    		<button class="green search-btn margin-0">
 		    			<i class="fa fa-search"></i>
 		    		</button>
 		    		<ul class="advanced-search">
-		    			<li>Search
-		    				<span class="button">All Mail <i class="fa fa-caret-down"></i></span>
-		    				<dl class="query-select">
-	    						<dt>All Mail</dt>
-	    						<dt>Inbox</dt>
-	    						<dt>Starred</dt>
-	    						<dt></dt>
-	    					</dl>
+		    			<li>
+		    				<label>Search</label>
+		    				<span class="query-select">
+		    					<span class="button">All Mail <i class="fa fa-caret-down"></i></span>
+			    				<dl>
+		    						<dt>All Mail</dt>
+		    						<dt>Inbox</dt>
+		    						<dt>Starred</dt>
+		    						<dt></dt>
+		    					</dl>
+		    				</span>
 		    			</li>
 		    			<li>
-		    				<div>From</div>
+		    				<div class="label">From</div>
 		    				<input type="text" class="form-control">
 		    			</li>
 		    			<li>
-		    				<div>To</div>
+		    				<div class="label">To</div>
 		    				<input type="text" class="form-control">
 		    			</li>
 		    			<li>
-		    				<div>Subject</div>
+		    				<div class="label">Subject</div>
 		    				<input type="text" class="form-control">
 		    			</li>
 		    			<li>
-		    				<div>Has the words</div>
+		    				<div class="label">Has the words</div>
 		    				<input type="text" class="form-control">
 		    			</li>
 		    			<li>
-		    				<div>Doesn't have</div>
+		    				<div class="label">Doesn't have</div>
 		    				<input type="text" class="form-control">
 		    			</li>
 		    			<li>
-		    				<button class="blue">
+		    				<button class="green search-btn margin-left-0">
 		    					<i class="fa fa-search"></i>
 		    				</button>
 		    			</li>	
@@ -80,11 +85,11 @@
 		</div>
 		<div id="container">
 			<div id="sidebar">
-				<ul>
+				<ul class="menu-list">
 					<li>
-						<button class="red">Take Task</button>
+						<button class="important">Take Task</button>
 					</li>
-					<li>
+					<li class="current">
 						<a href="#">My Box (10)</a>
 					</li>
 					<li>
@@ -94,7 +99,7 @@
 						<a href="#">Forward Task (10)</a>
 					</li>
 					<li>
-						<a href="#" class="buttom">New Message</a>
+						<button class="important">New Message</button>
 					</li>
 					<li>
 						<a href="#">Inbox (350)</a>
@@ -103,16 +108,10 @@
 						<a href="#">Starred</a>
 					</li>
 					<li>
-						<a href="#">Sent</a>
-					</li>
-					<li>
 						<a href="#">Drafts</a>
 					</li>
 					<li>
 						<a href="#">Spam</a>
-					</li>
-					<li>
-						<a href="#">Trash</a>
 					</li>
 				</ul>
 			</div>
@@ -135,32 +134,7 @@
 								<i class="fa fa-caret-down"></i>
 							</div>
 							<ul class="dropdown">
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-						</span>
-						<span class="group">
-							<div class="button">More
-								<i class="fa fa-caret-down"></i>
-							</div>
-							<ul class="dropdown">
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-						</span>
-						<span class="group">
-							<div class="button">Delete
-								<i class="fa fa-caret-down"></i>
-							</div>
-							<ul class="dropdown">
-								<li></li>
-								<li></li>
-								<li></li>
-								<li></li>
+								<li>Trash</li>
 							</ul>
 						</span>
 					</div>
@@ -293,11 +267,22 @@
 				</div>
 				<div class="mail-detail">
 					<div class="subject">
-						<span >Re: Test Email for Aug. newsletter</span>
+						<span>
+							<strong>Re: Test Email for Aug. newsletter</strong>
+						</span>
 						<span class="button tag">Inbox
 							<small>
 								<i class="fa fa-close"></i>
 							</small>
+						</span>
+						<span class="roll-all">
+							<span class="roll-to">
+								<i class="fa fa-share"></i>
+							</span>
+							<ul class="dropdown">
+								<li>i</li>
+								<li>2</li>
+							</ul>
 						</span>
 					</div>
 				</div>
