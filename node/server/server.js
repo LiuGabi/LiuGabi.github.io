@@ -4,17 +4,30 @@
  * @date    2014-10-27 11:26:18
  * @version $Id$
  */
-console.log("server");
 var http = require("http");
+var url = require("url");
 
-function start() {
+function start(route,handle) {
+
 	function onRequest(request,response) {
-		console.log("request received")
+
+		var pathname = url.parse(request.url).pathname;
+
+		console.log("Request for" + pathname + "recived.");
+
+		route(handle,pathname);
+
 		response.writeHead(200,{"Content-Type":"text/plain"});
-		response.write("Hello World");
+
+		var content = route(handle,pathname);
+
+		response.write(content);
 		response.end();
-	}	
+	}
+
 	http.createServer(onRequest).listen(8888);
-	console.log("server has started.")
+	console.log("server has started.");
+
 }
+
 exports.start = start;

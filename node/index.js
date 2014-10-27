@@ -6,5 +6,12 @@
  */
 
 var server = require("./server/server.js");
+var route = require("./route/route.js");
+var requestHandlers = require("./requestHandlers/requestHandlers.js");
 
-server.start();
+var handle = {};
+handle["/"] = requestHandlers.start;
+handle["/start"] = requestHandlers.start;
+handle["/upload"] = requestHandlers.upload;
+
+server.start(route.route,handle);
