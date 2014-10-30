@@ -9,7 +9,7 @@
 <title>JS BOOK</title>
 </head>
 <body>
-<div class="wrapper">
+<!-- <div class="wrapper">
 	<div class="book">
 		<ul class="pages">
 			<li class="page page-odd cover">
@@ -78,9 +78,20 @@
 			<strong>back</strong>
 		</span>
 	</div>
+</div> -->
+<div id="magazine">
+    <div><span class="text">Page 1</span></div>
+    <div><span class="text">Page 2</span></div>
+    <div><span class="text">Page 3</span></div>
+    <div><span class="text">Page 4</span></div>
+    <div><span class="text">Page 5</span></div>
 </div>
 <script src="../theme/js/jquery-1.11.1.min.js"></script>
-<script src="../theme/js/animate/jsbook.js"></script>
+<script src="../theme/js/animate/turn.js"></script>
+<script>
+	$('#magazine').turn({gradients: true, acceleration: true});
+</script>
+<!-- <script src="../theme/js/animate/jsbook.js"></script> -->
 </body>
 </html>
  
