@@ -1,16 +1,10 @@
-/**
- * 
- * @authors Your Name (you@example.org)
- * @date    2014-10-27 14:58:48
- * @version $Id$
- */
-function route(handle,pathname, response) {
+function route(handle, pathname, response, postData) {
 
 	console.log("About to route a request for" + pathname);
 
 	if (typeof handle[pathname] === "function") {
 
-		return handle[pathname](response);
+		return handle[pathname](response, postData);
 
 	} else {
 
