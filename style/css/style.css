@@ -24,6 +24,11 @@ header:before,
 	content: "";
 	display: table;
 }
+header:after,
+.navbar-header:after,
+.container:after {
+	clear: both;
+}
 
 @media (min-width: 1200px) {
 	.container {
