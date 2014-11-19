@@ -39,7 +39,7 @@ header:after,
 	}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
 	.navbar-brand {
 		height: 80px;
 		padding: 22px 15px;
