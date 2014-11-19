@@ -7,8 +7,8 @@ header {
 }
 .navbar-brand {
 	float: left;
-	padding: 15px;
-	height: 50px;
+	padding: 5px;
+	height: 42px;
 }
 
 .container {
@@ -36,5 +36,13 @@ header:after,
 @media (min-width: 1200px) {
 	.container {
 		width: 980px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.navbar-brand {
+		height: 80px;
+		padding: 22px 15px;
+		text-transform: uppercase;
 	}
 }
