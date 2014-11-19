@@ -20,7 +20,10 @@ header {
 
 header:before,
 .navbar-header:before,
-.container:before {
+.container:before,
+header:after,
+.navbar-header:after,
+.container:after {
 	content: " ";
 	display: table;
 }
