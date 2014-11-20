@@ -1,6 +1,6 @@
-var header = angular.module("headerModule", []);
+var app = angular.module("myApp", []);
 
-header.controller("headerController", function($scope) {
+app.controller("headerController", function($scope) {
 
 	$scope.firstName = "John";
 

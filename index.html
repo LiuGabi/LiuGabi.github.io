@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="myApp">
 <head ng-app="headerModule">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
@@ -12,14 +12,9 @@
 <title>| Love Life!</title>
 </head>
 <body>
-<div ng-controller="headerController">
-	{{firstName}}
-</div>
-<div ng-app="ok">
-	<header ng-include="'approot/template/layout/header.html'"></header>
-	<div ng-include="'approot/template/layout/banner.html'"></div>
-	<footer ng-include="'approot/template/layout/footer.html'"></footer>
-</div>
+<header ng-include="'approot/template/layout/header.html'"></header>
+<div ng-include="'approot/template/layout/banner.html'"></div>
+<footer ng-include="'approot/template/layout/footer.html'"></footer>
 <!-- <div ng-app="" ng-init="quantity=1;cost=5"> -->
 
 <!-- </div>	 -->
