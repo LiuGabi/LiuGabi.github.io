@@ -28,6 +28,9 @@ header {
 }
 
 @media (min-width: 768px) {
+	.navbar-header {
+		float: left;
+	}
 	.navbar-header .navbar-brand {
 		height: 80px;
 		padding: 22px 15px;
@@ -35,6 +38,9 @@ header {
 	}
 	.navbar-collapse {
 
+	}
+	.nav-right {
+		float: right;
 	}
 }
 
