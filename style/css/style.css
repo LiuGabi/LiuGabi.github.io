@@ -13,6 +13,22 @@ header {
 .navbar-collapse {
 
 }
+.nav>li>a {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	color: #999;
+	text-transform: uppercase;
+}
+.nav>li>a:hover,
+.nav>li>a:focus {
+	color: #fff;
+	background-color: transparent;
+}
+.nav>li.active>a {
+	color: #fff;
+	background-color: #F54325;
+}
 
 .container {
 	margin-left: auto;
@@ -39,11 +55,16 @@ header {
 	.navbar-collapse {
 
 	}
+	.nav-right {
+		float: right;
+	}
 	.nav>li {
 		float: left;
 	}
-	.nav-right {
-		float: right;
+	.nav>li>a {
+		font-size: 13px;
+		font-weight: 700;
+		padding: 33px 11px 32px;
 	}
 }
 
