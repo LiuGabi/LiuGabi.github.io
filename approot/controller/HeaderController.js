@@ -1,6 +1,7 @@
-angular.module("HeaderModule", []).controller("HeaderController", function() {
+angular.module("HeaderModule", [])
+.controller("HeaderController", function() {
 
-	$scope.title = "Demo";
+	$scope.demo = "Demo";
 	$scope.updateTitle = function() {
 		$scope.title = "That's a new title.";
 	}
