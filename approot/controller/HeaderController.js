@@ -1,5 +1,5 @@
-angular.module("HeaderModule", [])
-.controller("HeaderController", function($scope) {
+angular.module("headerModule", [])
+.controller("headerController", function($scope) {
 
 	$scope.demo = "Demo";
 	$scope.updateTitle = function() {
