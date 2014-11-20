@@ -39,6 +39,9 @@ header {
 	.navbar-collapse {
 
 	}
+	.nav>li {
+		float: left;
+	}
 	.nav-right {
 		float: right;
 	}
