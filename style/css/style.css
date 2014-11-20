@@ -51,16 +51,19 @@ header:before,
 .navbar-header:before,
 .navbar-collapse:before,
 .container:before,
+.nav:before,
 header:after,
 .navbar-header:after,
 .navbar-collapse:after,
-.container:after {
+.container:after,
+.nav:after {
 	content: " ";
 	display: table;
 }
 header:after,
 .navbar-header:after,
 .navbar-collapse:after,
-.container:after {
+.container:after,
+.nav:after {
 	clear: both;
 }
