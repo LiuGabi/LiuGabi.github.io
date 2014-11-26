@@ -1,25 +1,15 @@
 var indexModule = angular.module("indexModule", []);
 
 indexModule
-.controller("indexCtl", function(){
-
+.controller("home", function($scope){
+	console.log("home");
 })
-.controller("demo", function(){
-	
+.controller("demo", function($scope){
+	console.log("demo");
 })
-.controller("index2Ctl", function(){
-	
+.controller("process", function($scope){
+	console.log("process");
 })
-.run([
-	"$rootScope",
-	"$location",
-	function($rootScope, $location) {
-
-		$rootScope.path = $location.path();
-
-		$rootScope.$on("$routeChangeSuccess", function(newVal) {
-			$rootScope.path = $location.path();
-		});
-
-	}
-]);
+.controller("resume", function($scope){
+	console.log("resume");
+});

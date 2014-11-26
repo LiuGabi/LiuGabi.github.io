@@ -1,14 +1,12 @@
-var app = angular.module("myApp", ["ngRoute", "indexModule"]);
+var app = angular.module("app", ["ngRoute", "indexModule"]);
 
-app.controller("header", function($scope) {
-
+app
+.controller("header", function($scope){
 	$scope.home = "Home";
 	$scope.demo = "Demo";
 	$scope.process = "Process";
 	$scope.resume = "Resume";
-
-});
-app
+})
 .config([
 	"$routeProvider",
 	"$locationProvider",
@@ -21,19 +19,37 @@ app
 
 		$routeProvider
 		.when("/", {
-			templateUrl: "approot/template/demo/demo.html",
-			controller:"demo"
+			templateUrl: "approot/template/home/home.html",
+			controller:"home"
 		})
 		.when("/demo", {
-			templateUrl:"../",
-			controller:""
+			templateUrl:"approot/template/demo/demo.html",
+			controller:"demo"
 		})
-		.when("index2", {
-			templateUrl:"",
-			controller:""
+		.when("/process", {
+			templateUrl:"approot/template/process/process.html",
+			controller:"process"
+		})
+		.when("/resume", {
+			templateUrl:"approot/template/process/process.html",
+			controller:"resume"
 		})
 		.otherwise({
-			redirectTo:""
+			redirectTo:"/"
 		});
+
+	}
+])
+.run([
+	"$rootScope",
+	"$location",
+	function($rootScope, $location) {
+		console.log("ok ok");
+		$rootScope.path = $location.path();
+
+		$rootScope.$on("$routeChangeSuccess", function(newVal) {
+			$rootScope.path = $location.path();
+		});
+
 	}
 ]);
