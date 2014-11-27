@@ -1,80 +1,17 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'findhandler' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.33
-4 verbose cache add [ 'findhandler', null ]
-5 verbose cache add name=undefined spec="findhandler" args=["findhandler",null]
-6 verbose parsed url { protocol: null,
-6 verbose parsed url   slashes: null,
-6 verbose parsed url   auth: null,
-6 verbose parsed url   host: null,
-6 verbose parsed url   port: null,
-6 verbose parsed url   hostname: null,
-6 verbose parsed url   hash: null,
-6 verbose parsed url   search: null,
-6 verbose parsed url   query: null,
-6 verbose parsed url   pathname: 'findhandler',
-6 verbose parsed url   path: 'findhandler',
-6 verbose parsed url   href: 'findhandler' }
-7 silly lockFile 510c928c-findhandler findhandler
-8 verbose lock findhandler /Users/liuam/.npm/510c928c-findhandler.lock
-9 silly lockFile 510c928c-findhandler findhandler
-10 silly lockFile 510c928c-findhandler findhandler
-11 verbose addNamed [ 'findhandler', '' ]
-12 verbose addNamed [ null, '*' ]
-13 silly lockFile d6b728e9-findhandler findhandler@
-14 verbose lock findhandler@ /Users/liuam/.npm/d6b728e9-findhandler.lock
-15 silly addNameRange { name: 'findhandler', range: '*', hasData: false }
-16 verbose request where is /findhandler
-17 verbose request registry https://registry.npmjs.org/
-18 verbose request id af029ffe4ed601c6
-19 verbose url raw /findhandler
-20 verbose url resolving [ 'https://registry.npmjs.org/', './findhandler' ]
-21 verbose url resolved https://registry.npmjs.org/findhandler
-22 verbose request where is https://registry.npmjs.org/findhandler
-23 info trying registry request attempt 1 at 23:15:32
-24 http GET https://registry.npmjs.org/findhandler
-25 http 404 https://registry.npmjs.org/findhandler
-26 verbose headers { date: 'Thu, 27 Nov 2014 15:15:33 GMT',
-26 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-26 verbose headers   'content-type': 'application/json',
-26 verbose headers   'cache-control': 'max-age=0',
-26 verbose headers   'content-length': '52',
-26 verbose headers   'accept-ranges': 'bytes',
-26 verbose headers   via: '1.1 varnish',
-26 verbose headers   'x-served-by': 'cache-ty66-TYO',
-26 verbose headers   'x-cache': 'MISS',
-26 verbose headers   'x-cache-hits': '0',
-26 verbose headers   'x-timer': 'S1417101333.319185,VS0,VE187',
-26 verbose headers   'keep-alive': 'timeout=10, max=50',
-26 verbose headers   connection: 'Keep-Alive' }
-27 silly registry.get cb [ 404,
-27 silly registry.get   { date: 'Thu, 27 Nov 2014 15:15:33 GMT',
-27 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-27 silly registry.get     'content-type': 'application/json',
-27 silly registry.get     'cache-control': 'max-age=0',
-27 silly registry.get     'content-length': '52',
-27 silly registry.get     'accept-ranges': 'bytes',
-27 silly registry.get     via: '1.1 varnish',
-27 silly registry.get     'x-served-by': 'cache-ty66-TYO',
-27 silly registry.get     'x-cache': 'MISS',
-27 silly registry.get     'x-cache-hits': '0',
-27 silly registry.get     'x-timer': 'S1417101333.319185,VS0,VE187',
-27 silly registry.get     'keep-alive': 'timeout=10, max=50',
-27 silly registry.get     connection: 'Keep-Alive' } ]
-28 silly lockFile d6b728e9-findhandler findhandler@
-29 silly lockFile d6b728e9-findhandler findhandler@
-30 error 404 404 Not Found: findhandler
-30 error 404
-30 error 404 'findhandler' is not in the npm registry.
-30 error 404 You should bug the author to publish it
-30 error 404
-30 error 404 Note that you can also install from a
-30 error 404 tarball, folder, or http url, or git url.
-31 error System Darwin 13.4.0
-32 error command "node" "/usr/local/bin/npm" "install" "findhandler"
-33 error cwd /Users/liuam/Gabi/site/LiuGabi.github.io
-34 error node -v v0.10.33
-35 error npm -v 1.4.28
-36 error code E404
-37 verbose exit [ 1, true ]
+4 error install Couldn't read dependencies
+5 error package.json ENOENT, open '/Users/liuam/Gabi/site/LiuGabi.github.io/package.json'
+5 error package.json This is most likely not a problem with npm itself.
+5 error package.json npm can't find a package.json file in your current directory.
+6 error System Darwin 13.4.0
+7 error command "node" "/usr/local/bin/npm" "install"
+8 error cwd /Users/liuam/Gabi/site/LiuGabi.github.io
+9 error node -v v0.10.33
+10 error npm -v 1.4.28
+11 error path /Users/liuam/Gabi/site/LiuGabi.github.io/package.json
+12 error code ENOPACKAGEJSON
+13 error errno 34
+14 verbose exit [ 34, true ]
