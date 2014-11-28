@@ -1,7 +1,7 @@
 (function(angular) {
 
 	"use strict";
-
+	console.log(history.forward());
 	var app = angular.module("app", ["ngRoute", "indexModule"]);
 
 	app
