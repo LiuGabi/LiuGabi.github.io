@@ -12,14 +12,10 @@
 <script type="text/javascript" src="approot/angular-route.min.js"></script>
 <script type="text/javascript" src="approot/module/indexModule.js"></script>
 <script type="text/javascript" src="approot/module/app.js"></script>
-<script type="text/javascript">
-    angular.element(document.getElementsByTagName('head')).append(angular.element('<base href="' + window.location.pathname + '" />'));
-  </script>
 <title>| Love Life!</title>
 </head>
 <body>
 <header ng-include="'approot/template/layout/header.html'"></header>
-<section class="banner" ng-include="'approot/template/layout/banner.html'"></section>
 <div ng-view></div>
 <footer ng-include="'approot/template/layout/footer.html'"></footer>
 </body>

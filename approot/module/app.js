@@ -19,26 +19,29 @@
 
 		$routeProvider
 		.when("/", {
-			templateUrl: "approot/template/layout/banner.html",
+			templateUrl: "approot/template/home/index.html",
 			controller:"home"
 		})
 		.when("/demo", {
-			templateUrl:"approot/template/demo/demo.html",
+			templateUrl:"approot/template/demo/index.html",
 			controller:"demo"
 		})
 		.when("/process", {
-			templateUrl:"approot/template/process/process.html",
+			templateUrl:"approot/template/process/index.html",
 			controller:"process"
 		})
 		.when("/resume", {
-			templateUrl:"approot/template/resume/resume.html",
+			templateUrl:"approot/template/resume/index.html",
 			controller:"resume"
 		})
 		.otherwise({
 			redirectTo:"/"
 		});
 
-		$locationProvider.html5Mode(true);
+		$locationProvider.html5Mode({
+			enabled: true,
+			requireBase: false
+		});
 
 	});
 
