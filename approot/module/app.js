@@ -1,25 +1,25 @@
-var app = angular.module("app", ["ngRoute", "indexModule"]);
+(function(angular) {
 
-app
-.controller("header", function($scope){
-	$scope.home = "Home";
-	$scope.demo = "Demo";
-	$scope.process = "Process";
-	$scope.resume = "Resume";
-})
-.config([
-	"$routeProvider",
-	"$locationProvider",
-	function($routeProvider, $locationProvider) {
+	"use strict";
 
-		$locationProvider.html5Mode({
-			enabled: true,
-			requireBase: false
-		});
+	var app = angular.module("app", ["ngRoute", "indexModule"]);
+
+	app
+	.controller("header", function($scope, $route, $routeParams, $location){
+		$scope.home = "Home";
+		$scope.demo = "Demo";
+		$scope.process = "Process";
+		$scope.resume = "Resume";
+
+		$scope.$route = $route;
+     	$scope.$location = $location;
+     	$scope.$routeParams = $routeParams;
+	})
+	.config(function($routeProvider, $locationProvider) {
 
 		$routeProvider
 		.when("/", {
-			templateUrl: "approot/template/home/home.html",
+			templateUrl: "approot/template/layout/banner.html",
 			controller:"home"
 		})
 		.when("/demo", {
@@ -31,25 +31,15 @@ app
 			controller:"process"
 		})
 		.when("/resume", {
-			templateUrl:"approot/template/process/process.html",
+			templateUrl:"approot/template/resume/resume.html",
 			controller:"resume"
 		})
 		.otherwise({
 			redirectTo:"/"
 		});
 
-	}
-])
-.run([
-	"$rootScope",
-	"$location",
-	function($rootScope, $location) {
-		console.log("ok ok");
-		$rootScope.path = $location.path();
+		$locationProvider.html5Mode(true);
 
-		$rootScope.$on("$routeChangeSuccess", function(newVal) {
-			$rootScope.path = $location.path();
-		});
+	});
 
-	}
-]);
+})(window.angular);
