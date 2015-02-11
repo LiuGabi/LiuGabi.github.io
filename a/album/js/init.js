@@ -109,7 +109,8 @@ $(function($){
 			'a/album/images/famille.jpg',
 			'a/album/images/mariage.jpg',
 			'a/album/images/studio.jpg',
-			'a/album/images/menu.jpg'
+			'a/album/images/menu.jpg',
+			'a/album/js/main.js'
 		], 	
 		percent = 0, 
 		duration = 10000,
