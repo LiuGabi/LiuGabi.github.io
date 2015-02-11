@@ -1,9 +1,9 @@
 var debug = false,
-	local = (debug) ? '/Dropbox/lena-sanz/':'/';
+	local = (debug) ? '/':'/';
 
-// if (!location.origin) {
-// 	location.origin = location.protocol + "//" + location.host;
-// }
+if (!location.origin) {
+	location.origin = location.protocol + "//" + location.host;
+}
 
 if (typeof Object.create !== 'function') {
 	Object.create = function(obj) {
@@ -105,12 +105,12 @@ $(function($){
 	var root = $(window),
 		deferred = new jQuery.Deferred(),
 		assets = [
-			'images/exterieur.jpg',
-			'images/famille.jpg',
-			'images/mariage.jpg',
-			'images/studio.jpg',
-			'menu.jpg',
-			'js/main.js'
+			'../images/exterieur.jpg',
+			'../images/famille.jpg',
+			'../images/mariage.jpg',
+			'../images/studio.jpg',
+			'../menu.jpg',
+			'../js/main.js'
 		], 	
 		percent = 0, 
 		duration = 10000,
@@ -174,5 +174,5 @@ $(function($){
 		}
 	}
 	window.init();
-	
+
 });
