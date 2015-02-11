@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	var url = location.hash.replace(/^#/, ''),
 		container = $("#container");
-	// loadUrl(url, container);
+	loadUrl(url, container);
 
 });
 
