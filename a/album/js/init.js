@@ -105,12 +105,12 @@ $(function($){
 	var root = $(window),
 		deferred = new jQuery.Deferred(),
 		assets = [
-			'../images/exterieur.jpg',
-			'../images/famille.jpg',
-			'../images/mariage.jpg',
-			'../images/studio.jpg',
-			'../menu.jpg',
-			'../js/main.js'
+			'a/album/images/exterieur.jpg',
+			'a/album/images/famille.jpg',
+			'a/album/images/mariage.jpg',
+			'a/album/images/studio.jpg',
+			'a/album/menu.jpg',
+			'a/album/js/main.js'
 		], 	
 		percent = 0, 
 		duration = 10000,
