@@ -15,3 +15,10 @@
 	-webkit-box-shadow: 0px 0px 120px #5F5F5F;
 	box-shadow: 0px 0px 120px #5F5F5F;
 }
+
+.page-1 {
+	background: url(../images/china-bank-bg.png) no-repeat;
+}
+.page-2 {
+	background: url(../images/great-wall-bg.png) no-repeat;
+}
