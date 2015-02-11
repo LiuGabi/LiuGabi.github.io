@@ -1,8 +1,9 @@
-var debug = false, local = (debug) ? '/Dropbox/lena-sanz/':'/';
+var debug = false,
+	local = (debug) ? '/Dropbox/lena-sanz/':'/';
 
-if (!location.origin) {
-	location.origin = location.protocol + "//" + location.host;
-}
+// if (!location.origin) {
+// 	location.origin = location.protocol + "//" + location.host;
+// }
 
 if (typeof Object.create !== 'function') {
 	Object.create = function(obj) {
@@ -173,4 +174,5 @@ $(function($){
 		}
 	}
 	window.init();
+	
 });
