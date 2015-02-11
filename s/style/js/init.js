@@ -18,7 +18,7 @@ function loadUrl (url, container) {
 			container.html("<h1><i class='fa fa-cog fa-spin'>Loading...</i></h1>");
 			
 			if (container[0] == $("#container")) {
-				drawBreadCrumb();
+				// drawBreadCrumb();
 				$("html").animate({
 					scrollTop: 0
 				}, "fast");
