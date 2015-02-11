@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app="app">
+<head ng-app="headerModule">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="style/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="style/css/reset.css">
+<link rel="stylesheet" type="text/css" href="style/css/style.css">
+<link href="style/images/icon/logo-white-2.ico" rel="icon" />
+<script type="text/javascript" src="approot/angular.min.js"></script>
+<script type="text/javascript" src="approot/angular-route.min.js"></script>
+<script type="text/javascript" src="approot/module/indexModule.js"></script>
+<script type="text/javascript" src="approot/module/app.js"></script>
+<title>| Love Life!</title>
+</head>
+<body>
+<header ng-include="'approot/template/layout/header.html'"></header>
+<div ng-view></div>
+<footer ng-include="'approot/template/layout/footer.html'"></footer>
+</body>
+</html>
+ 
