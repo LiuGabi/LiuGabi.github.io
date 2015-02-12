@@ -3,7 +3,7 @@ $(document).ready(function() {
 	$("#nav > li > a").click(function(e) {
 
 		e.preventDefault();
-		var url = location.hostname + $(this).attr("href") + "/index.html";
+		var url = location.hostname + "/s/template" + $(this).attr("href") + "/index.html";
 		container = $("#content");
 		loadUrl(url, container);
 
