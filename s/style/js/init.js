@@ -1,7 +1,14 @@
 $(document).ready(function() {
 
-	var url = "s/template/layout/header.html",
+	$("#nav > li > a").click(function(e) {
+
+		var url = $(this).attr("href");
 		container = $("#content");
+		loadUrl(url, container);
+
+	});
+	// var url = "s/template/layout/header.html",
+		// container = $("#content");
 		// loadUrl(url, container);
 
 });
