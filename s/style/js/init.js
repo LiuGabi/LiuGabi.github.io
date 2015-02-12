@@ -2,7 +2,8 @@ $(document).ready(function() {
 
 	$("#nav > li > a").click(function(e) {
 
-		var url = $(this).attr("href") + "index.html";
+		e.preventDefault();
+		var url = $(this).attr("href") + "/index.html";
 		container = $("#content");
 		loadUrl(url, container);
 
