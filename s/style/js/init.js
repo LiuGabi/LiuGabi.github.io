@@ -13,7 +13,7 @@ function loadUrl (url, container) {
 		type: "GET",
 		url: url,
 		dataType: 'html',
-		cache: true,
+		// cache: true,
 		beforeSend: function() {
 			container.html("<h1><i class='fa fa-cog fa-spin'>Loading...</i></h1>");
 			
