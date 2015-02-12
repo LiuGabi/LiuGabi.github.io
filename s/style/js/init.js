@@ -3,14 +3,11 @@ $(document).ready(function() {
 	$("#nav > li > a").click(function(e) {
 
 		e.preventDefault();
-		var url = "/s/template/" + $(this).attr("href") + "/index.html";
+		var url = "/s/template" + $(this).attr("href") + "/index.html";
 		container = $("#content");
 		loadUrl(url, container);
 
 	});
-	// var url = "s/template/layout/header.html",
-		// container = $("#content");
-		// loadUrl(url, container);
 
 });
 
@@ -21,7 +18,7 @@ function loadUrl (url, container) {
 		type: "GET",
 		url: url,
 		dataType: 'html',
-		// cache: true,
+		cache: true,
 		beforeSend: function() {
 			container.html("<h1><i class='fa fa-cog fa-spin'>Loading...</i></h1>");
 			
