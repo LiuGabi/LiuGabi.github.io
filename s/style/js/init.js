@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	var url = "s/template/layout/header.html",
-		container = $("#container");
+		container = $("#content");
 		loadUrl(url, container);
 
 });
@@ -17,7 +17,7 @@ function loadUrl (url, container) {
 		beforeSend: function() {
 			container.html("<h1><i class='fa fa-cog fa-spin'>Loading...</i></h1>");
 			
-			if (container[0] == $("#container")) {
+			if (container[0] == $("#content")) {
 				// drawBreadCrumb();
 				$("html").animate({
 					scrollTop: 0
