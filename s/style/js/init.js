@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var url = "template/layout/header.html",
+	var url = "s/template/layout/header.html",
 		container = $("#container");
 		loadUrl(url, container);
 
