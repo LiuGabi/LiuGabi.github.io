@@ -3,9 +3,14 @@ $(document).ready(function() {
 	$("#nav > li > a").click(function(e) {
 
 		e.preventDefault();
-		var url = "/s/template" + $(this).attr("href") + "/index.html";
-		container = $("#content");
-		loadUrl(url, container);
+		var url = "/s/template" + $(this).attr("href") + "/index.html",
+			container = $("#content");
+		if ($(this).hasClass("home")) {
+			url = "/index.html";
+			loadUrl(url, container);
+		} else {
+			loadUrl(url, container);
+		}
 
 	});
 
