@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	var url = "s/template/layout/header.html",
 		container = $("#content");
-		loadUrl(url, container);
+		// loadUrl(url, container);
 
 });
 
