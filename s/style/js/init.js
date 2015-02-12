@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var url = location.hash.replace(/^#/, ''),
+	var url = "template/layout/header.html",
 		container = $("#container");
 		loadUrl(url, container);
 
