@@ -45,6 +45,10 @@ header {
 	background:url(../images/banner/banner-bg.png) center center;
 }
 
+.center {
+	background-color: red;
+	height: 50px;
+}
 
 footer {
 	padding-top: 50px;
