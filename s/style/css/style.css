@@ -89,13 +89,26 @@ footer .copyright {
 }
 
 
+/* home page */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 736px),
+only screen and (min-resolution: 144dpi) and (min-width: 736px),
+only screen and (min-resolution: 144dppx) and (min-width: 736px) {
+	.page-home .promos .promo-world-gallery {
+		background-image: url(../images/home/promo_appletv_hbonow_large.jpg);
+	}
+}
+
+
+
+
+
 @media (min-width: 1200px) {
 	.container {
 		width: 980px;
 	}
 }
 
-@media (min-width: 768px) {
+@media (min-width: 720px) {
 	.navbar-header {
 		float: left;
 	}
