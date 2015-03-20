@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+<link href="s/style/images/icon/logo-white-2.ico" rel="icon" />
+<link href="s/style/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
+<link href="s/style/css/reset.css"  rel="stylesheet" type="text/css">
+<link href="s/style/css/style.css"  rel="stylesheet" type="text/css">
+<script type="text/javascript" src="s/style/js/jquery-1.11.1.min.js"></script>
+<title>| Love Life!</title>
+</head>
+<body>
+<video id="video" autoplay="" width="320px" height="240px"></video>
+<script type="text/javascript">
+	var video = document.getElementById("video");
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia;
+	if (navigator.getUserMedia) {
+	    if (navigator.webkitURL) {
+	        navigator.getUserMedia("video", function (stream) {
+	            video.src = window.webkitURL.createObjectURL(stream);
+	        }, function (error) { alert(error); });
+	    }
+	    else {
+	        navigator.getUserMedia("video", function (stream) {
+	            video.src = window.webkitURL.createObjectURL(stream);
+	        }, function (error) { alert(error); });
+	    }
+	}
+	else {
+	    alert("navigator.getUserMedia  Error");
+	}
+</script>
+</body>
+</html>
