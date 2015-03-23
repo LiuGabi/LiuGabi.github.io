@@ -53,6 +53,7 @@ $(function() {
                 });
                 navigator.webkitGetUserMedia(videoObj, function(stream) {
                     video.src = window.webkitURL.createObjectURL(stream);
+                    console.log(stream);
                     video.play();
                     $('#lifescan #main .btn_click').css('margin-top', '-550px');
                     video.addEventListener('loadeddata', function() {
