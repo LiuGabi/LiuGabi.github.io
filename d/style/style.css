@@ -43,3 +43,8 @@
 	display: block;
 	margin: 20px auto;
 }
+
+#scan {
+	width: 30px;
+	height: 30px;
+}

@@ -149,6 +149,9 @@ function convertCanvasToImage(canvas) {
     alert(image.src);
     //删除字符串前的提示信息“data:image/png;base64”
     var b64 = image.src.substring(22);
+
+    $("#scan").attr("src") = b64;
+
     var myDate = new Date();
     var filename = myDate.getTime();
     $.post("/Article/SavePhoto", {
