@@ -7,46 +7,22 @@
 <title>| Love Life!</title>
 </head>
 <body>
-	<article>
-		<style scoped>
-			video { transform: scaleX(-1); }
-			p { text-align: center; }
-		</style>
-		<h1>Snapshot Kiosk</h1>
-		<section id="splash">
-			<p id="errorMessage">Loading...</p>
-		</section>
-		<section id="app" hidden>
-			<p><video id="monitor" autoplay></video> <canvas id="photo"></canvas>
-			<p><input type=button value="&#x1F4F7;" onclick="snapshot()">
-		</section>
-		<script>
-			navigator.getUserMedia({video:true}, gotStream, noStream);
-			var video = document.getElementById('monitor');
-			var canvas = document.getElementById('photo');
-
-			function gotStream(stream) {
-				video.src = URL.createObjectURL(stream);
-				video.onerror = function () {
-					stream.stop();
-				};
-				stream.onended = noStream;
-				video.onloadedmetadata = function () {
-					canvas.width = video.videoWidth;
-					canvas.height = video.videoHeight;
-					document.getElementById('splash').hidden = true;
-					document.getElementById('app').hidden = false;
-				};
-			}
-
-			function noStream() {
-				document.getElementById('errorMessage').textContent = 'No camera available.';
-			}
-
-			function snapshot() {
-				canvas.getContext('2d').drawImage(video, 0, 0);
-			}
-		</script>
-	</article>
+	<div id="main" class="masthead">
+    <div id="face_scan_camera" class="container blackbg" style="height:792px; ">
+        <div style="width:1400px;margin:0 auto;">
+             <video id="video" width="1400" height="790" autoplay="autoplay" style="margin:0 auto;position:relative;z-index:100;"></video>                
+        </div>
+       <div class="camera-mask"></div>
+        <div class="camera-area" style="width:450px;height:350px;background:url(/images/lifescan/scan_kuang1.png) no-repeat;z-index:102;top:560px;left:780px;"> 
+            <img src="/images/lifescan/scan_kuang1.png" />
+           <div class="scan-area" style="height:585px;width:580px;display:none; ">
+              <canvas id="canvas" width="1054" height="790" style="display:inline-block; margin:0 auto;position:relative;left:13px;top:70px;z-index:100;"></canvas>                    
+            </div>
+           <a id="snap" ><img src="/images/lifescan/camera_btn.png" /></a>
+       </div>
+    </div>
+    <div id="cream_loading" style="display:none;position:absolute; margin:-62px 0 0 -62px;top:50%;left:50%;height:124px;width:124px;z-index:2001;"><img  src="/Images/cream_loading.gif"/></div>       
+</div>
+<script type="text/javascript" src="init.js"></script>
 </body>
 </html>
