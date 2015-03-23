@@ -26,10 +26,10 @@ $(function() {
             // Put video listeners into place
             if (navigator.getUserMedia) { // Standard
                 if (navigator.userAgent.indexOf('MQQBrowser') > -1) {
-                    jAlert('对不起，您的浏览器不支持拍照功能，请使用其他浏览器', '提示');
+                    alert('对不起，您的浏览器不支持拍照功能，请使用其他浏览器', '提示');
                     return false;
                 }
-                jAlert(message, '提示', function() {
+                alert(message, '提示', function() {
                     $(document).scrollTop($(window).height());
                 });
                 navigator.getUserMedia(videoObj, function(stream) {
@@ -48,7 +48,7 @@ $(function() {
                     });
                 }, errBack);
             } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
-                jAlert(message, '提示', function() {
+                alert(message, '提示', function() {
                     $(document).scrollTop($(window).height());
                 });
                 navigator.webkitGetUserMedia(videoObj, function(stream) {
@@ -68,7 +68,7 @@ $(function() {
                     });
                 }, errBack);
             } else if (navigator.mozGetUserMedia) { // Firefox-prefixed
-                jAlert(message, '提示', function() {
+                alert(message, '提示', function() {
                     $(document).scrollTop($(window).height());
                 });
                 navigator.mozGetUserMedia(videoObj, function(stream) {
@@ -85,7 +85,7 @@ $(function() {
                     });
                 }, errBack);
             } else if (navigator.msGetUserMedia) {
-                jAlert(message, '提示', function() {
+                alert(message, '提示', function() {
                     $(document).scrollTop($(window).height());
                 });
                 navigator.msGetUserMedia(videoObj, function(stream) {
@@ -118,12 +118,12 @@ $(function() {
                     });
                 } //判断是否Safari浏览器
                 else {
-                    jAlert('对不起，您的浏览器不支持拍照功能，请使用其他浏览器', '提示');
+                    alert('对不起，您的浏览器不支持拍照功能，请使用其他浏览器', '提示');
                 }
             }
         }, false);
     } catch (err) {
-        jAlert('对不起，您的浏览器不支持拍照功能，请使用其他浏览器', '提示');
+        alert('对不起，您的浏览器不支持拍照功能，请使用其他浏览器', '提示');
     }
 });
 // for iOS 
