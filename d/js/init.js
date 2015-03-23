@@ -57,7 +57,7 @@ $(function() {
                             $('#cream_loading').show();
                         } else {
                             $('#cream_loading').hide();
-                        };
+                        }
                         // $('#cream_loading').toggle();
                         context.drawImage(video, 0, 0, 640, 480);
                         convertCanvasToImage();
