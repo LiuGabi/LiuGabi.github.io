@@ -6,13 +6,12 @@
 }
 
 #snap img {
-
 	width: 30px;
 }
 .camera-area {
 	width:450px;
 	height:350px;
-	background:url(images/scan_kuang1.png) no-repeat;
+	background:url(../images/scan_kuang1.png) no-repeat;
 	z-index:102;
 	top:560px;
 	left:780px;
