@@ -34,7 +34,9 @@
 }
 .camera-btn-outer {
 	position: absolute;
-	bottom: -100px;
+	bottom: 0px;
 	width: 100%;
+	height: 100px;
 	background-color: red;
+	z-index: 2;
 }
