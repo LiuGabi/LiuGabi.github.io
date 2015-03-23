@@ -48,20 +48,10 @@ $(function() {
                     });
                 }, errBack);
             } else if (navigator.webkitGetUserMedia) { // WebKit-prefixed
-                alert(message, '提示', function() {
-                    $(document).scrollTop($(window).height());
-                });
+                alert(message);
                 navigator.webkitGetUserMedia(videoObj, function(stream) {
                     video.src = window.webkitURL.createObjectURL(stream);
-                    console.log(stream);
                     video.play();
-                    $('#lifescan #main .btn_click').css('margin-top', '-550px');
-                    video.addEventListener('loadeddata', function() {
-                        $(document).scrollTop($(window).height());
-                    }, false);
-                    if (navigator.userAgent.indexOf('UCBrowser') > -1) {
-                        $('#lifescan #main .btn_click').css('margin-top', '-10px');
-                    }
                     $('#snap').click(function() {
                         $('#cream_loading').toggle();
                         context.drawImage(video, 0, 0, 640, 480);
@@ -145,6 +135,7 @@ function receivedData() {
         alert(err);
     }
 }
+
 //帆布转换成图像并保存图片
 function convertCanvasToImage(canvas) {
     var image = new Image();
