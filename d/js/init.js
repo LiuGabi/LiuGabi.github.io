@@ -160,6 +160,7 @@ function convertCanvasToImage(canvas) {
                 $('#cream_loading').show();
             } else {
                 $('#cream_loading').hide();
+                alert("hide");
             }
             // $('#cream_loading').toggle();
             window.location.href = "/yourreenex?photo=" + result.photo;
