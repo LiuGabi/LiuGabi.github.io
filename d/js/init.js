@@ -59,7 +59,7 @@ $(function() {
                             $('#cream_loading').hide();
                         }
                         // $('#cream_loading').toggle();
-                        context.drawImage(video, 0, 0, 640, 480);
+                        context.drawImage(video, 0, 0);
                         convertCanvasToImage();
                     });
                 }, errBack);
