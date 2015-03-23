@@ -53,7 +53,12 @@ $(function() {
                     video.src = window.webkitURL.createObjectURL(stream);
                     video.play();
                     $('#snap').click(function() {
-                        $('#cream_loading').toggle();
+                        if($('#cream_loading').css("display":"none")) {
+                            $('#cream_loading').show();
+                        } else {
+                            $('#cream_loading').hide();
+                        };
+                        // $('#cream_loading').toggle();
                         context.drawImage(video, 0, 0, 640, 480);
                         convertCanvasToImage();
                     });
