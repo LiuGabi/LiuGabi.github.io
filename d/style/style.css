@@ -23,7 +23,7 @@
 	position: absolute;
 	z-index: 0;
   	top: 0;
-	background:url(../images/scan_kuang1.png) no-repeat;
+	background:url(../images/scan_kuang1.png);
 }
 #cream_loading {
 	display: none;
