@@ -13,13 +13,13 @@ $(function() {
                 },
                 errBack = function(error) {
                     if (error.PERMISSION_DENIED) {
-                        jAlert('用户拒绝了浏览器请求媒体的权限', '提示');
+                        alert('用户拒绝了浏览器请求媒体的权限', '提示');
                     } else if (error.NOT_SUPPORTED_ERROR) {
-                        jAlert('对不起，您的浏览器不支持拍照功能，请使用其他浏览器', '提示');
+                        alert('对不起，您的浏览器不支持拍照功能，请使用其他浏览器', '提示');
                     } else if (error.MANDATORY_UNSATISFIED_ERROR) {
-                        jAlert('指定的媒体类型未接收到媒体流', '提示');
+                        alert('指定的媒体类型未接收到媒体流', '提示');
                     } else {
-                        jAlert('系统未能获取到摄像头，请确保摄像头已正确安装。或尝试刷新页面，重试', '提示');
+                        alert('系统未能获取到摄像头，请确保摄像头已正确安装。或尝试刷新页面，重试', '提示');
                     }
                 };
             var message = "为了获得更准确的测试结果，请尽量将面部置于红框中，然后进行拍摄、扫描。 点击“OK”后，请在屏幕上方出现的提示框选择“允许”，以开启摄像功能";
