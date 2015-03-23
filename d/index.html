@@ -17,7 +17,7 @@
 	            video.src = window.webkitURL.createObjectURL(stream);
 	        },function (error) {
 	        	alert(error);
-	        }));
+	        });
 	    }
 	    else {
 	        navigator.getUserMedia("video", function (stream) {
