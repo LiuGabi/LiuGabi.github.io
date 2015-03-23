@@ -156,7 +156,12 @@ function convertCanvasToImage(canvas) {
         name: filename
     }, function(result) {
         if (result.success) {
-            $('#cream_loading').toggle();
+            if($('#cream_loading').css("display", "none")) {
+                $('#cream_loading').show();
+            } else {
+                $('#cream_loading').hide();
+            }
+            // $('#cream_loading').toggle();
             window.location.href = "/yourreenex?photo=" + result.photo;
         }
     });
