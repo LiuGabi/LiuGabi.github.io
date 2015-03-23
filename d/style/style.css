@@ -30,4 +30,5 @@
 	position: absolute;
 	top: 50px;
 	left: auto;
+	z-index: 2;
 }
