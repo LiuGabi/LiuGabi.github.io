@@ -59,6 +59,7 @@ $(function() {
                             $('#cream_loading').hide();
                         }
                         // $('#cream_loading').toggle();
+                        alert("gabi");
                         context.drawImage(video, 0, 0);
                         convertCanvasToImage();
                     });
@@ -145,7 +146,7 @@ function receivedData() {
 function convertCanvasToImage(canvas) {
     var image = new Image();
     image.src = document.getElementById("canvas").toDataURL("image/png");
-    //alert(image.src);
+    alert(image.src);
     //删除字符串前的提示信息“data:image/png;base64”
     var b64 = image.src.substring(22);
     var myDate = new Date();
