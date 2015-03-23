@@ -34,7 +34,7 @@
 }
 .camera-btn-outer {
 	position: absolute;
-	bottom: 0;
+	bottom: -100px;
 	width: 100%;
 	background-color: red;
 }
