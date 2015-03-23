@@ -5,16 +5,18 @@
 	padding: 0;
 }
 
+#video {
+	display: block;
+	width: 100%;
+}
+
 #snap img {
 	width: 30px;
 }
 .camera-area {
-	width:450px;
-	height:350px;
+	position: absolute;
+  	top: 0;
 	background:url(../images/scan_kuang1.png) no-repeat;
-	z-index:102;
-	top:560px;
-	left:780px;
 }
 #cream_loading {
 	display: none;
