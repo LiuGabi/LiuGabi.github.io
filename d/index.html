@@ -5,23 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <title>| Love Life!</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
     <div id="main" class="masthead">
-        <div id="face_scan_camera" class="container blackbg" style="height:792px; ">
+        <div id="face_scan_camera" class="container blackbg">
             <div>
-            	<video id="video" width="1400" height="790" autoplay="autoplay" style="margin:0 auto;position:relative;z-index:100;"></video>
+            	<video id="video" autoplay="autoplay"></video>
         	</div>
         	<div class="camera-mask"></div>
-        	<div class="camera-area" style="width:450px;height:350px;background:url(images/scan_kuang1.png) no-repeat;z-index:102;top:560px;left:780px;">
+        	<div class="camera-area">
             	<img src="images/scan_kuang1.png" />
-            	<div class="scan-area" style="height:585px;width:580px;display:none; ">
-                	<canvas id="canvas" width="1054" height="790" style="display:inline-block; margin:0 auto;position:relative;left:13px;top:70px;z-index:100;"></canvas>
+            	<div class="scan-area">
+                	<canvas id="canvas"></canvas>
             	</div>
-            	<a id="snap" ><img src="images/camera_btn.png" /></a>
+            	<a id="snap" >
+            		<img src="images/camera_btn.png" />
+            	</a>
         	</div>
     	</div>
-    	<div id="cream_loading" style="display:none;position:absolute; margin:-62px 0 0 -62px;top:50%;left:50%;height:124px;width:124px;z-index:2001;">
+    	<div id="cream_loading">
     		<img  src="images/cream_loading.gif"/>
     	</div>
     </div>
