@@ -50,7 +50,7 @@ $(function() {
                 alert(message);
                 navigator.webkitGetUserMedia(videoObj, function(stream) {
                     video.src = window.webkitURL.createObjectURL(stream);
-                    alert("gabi：" + stream);
+                    alert("gabi：" + stream + " src:" + video.src);
                     video.play();
                     $('#snap').click(function() {
                         if($('#cream_loading').css("display") == "none") {
