@@ -52,10 +52,10 @@ $(function() {
                     video.src = window.webkitURL.createObjectURL(stream);
                     video.play();
                     $('#snap').click(function() {
-                        if($('#cream_loading').css("display") == "none") {
-                            $('#cream_loading').show();
+                        if($('#loading').css("display") == "none") {
+                            $('#loading').show();
                         } else {
-                            $('#cream_loading').hide();
+                            $('#loading').hide();
                         }
                         
                         context.drawImage(video, 0, 0);
@@ -158,13 +158,12 @@ function convertCanvasToImage(canvas) {
         name: filename
     }, function(result) {
         if (result.success) {
-            if($('#cream_loading').css("display") == "none") {
-                $('#cream_loading').show();
+            if($('#loading').css("display") == "none") {
+                $('#loading').show();
             } else {
-                $('#cream_loading').hide();
+                $('#loading').hide();
                 alert("hide");
             }
-            // $('#cream_loading').toggle();
             window.location.href = "/yourreenex?photo=" + result.photo;
         }
     });
