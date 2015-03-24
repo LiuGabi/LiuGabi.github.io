@@ -53,7 +53,7 @@ $(function() {
                     video.src = window.webkitURL.createObjectURL(stream);
                     video.play();
                     $('#snap').click(function() {
-                        if($('#cream_loading').css("display", "none")) {
+                        if($('#cream_loading').css("display") == "none") {
                             $('#cream_loading').show();
                         } else {
                             $('#cream_loading').hide();
@@ -159,7 +159,7 @@ function convertCanvasToImage(canvas) {
         name: filename
     }, function(result) {
         if (result.success) {
-            if($('#cream_loading').css("display", "none")) {
+            if($('#cream_loading').css("display") == "none") {
                 $('#cream_loading').show();
             } else {
                 $('#cream_loading').hide();
