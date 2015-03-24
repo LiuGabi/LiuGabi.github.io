@@ -10,16 +10,18 @@
 <body>
     <div class="container">
         <video id="video" autoplay="autoplay"></video>
-    	<div class="camera-area">
-            <canvas id="canvas"></canvas>
-    	</div>
+		<canvas id="canvas"></canvas>
 	</div>
 	<div id="loading"></div>
-    <div class="camera-btn-outer">
-		<a id="snap" href="#">
-    		<img src="images/camera_btn.png" />
-    	</a>
-    	<img src="" id="scan">
+    <div class="camera-box">
+    	<div id="snap" class="camera-body">
+			<div class="lens"></div>
+			<div class="flare"></div>
+			<div class="menu"></div>
+		</div>
+    	<div class="scan-pic">
+    		<img src="" id="scan" alt="scan">
+    	</div>
 	</div>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
