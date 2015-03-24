@@ -17,17 +17,16 @@
 
 .camera-area {
 	position: absolute;
-	z-index: 0;
+	z-index: 2;
   	top: 0;
 	background:url(../images/scan_kuang1.png);
 }
-#cream_loading {
+#loading {
 	display: none;
-	position: absolute;
-	top: 50px;
-	left: 50px;
+	position: relative;
+	height: 100px;
 	z-index: 2;
-	background: url(../images/loading.gif) center center;
+	background: url(../images/loading.gif) center center #3E6B61 no-repeat;
 }
 
 .camera-btn-outer {
