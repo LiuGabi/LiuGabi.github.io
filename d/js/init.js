@@ -41,7 +41,6 @@ $(function() {
                         $(document).scrollTop($(window).height());
                     }, false);
                     $('#snap').click(function() {
-                        //$('.scan-area').show();
                         $('#cream_loading').toggle();
                         context.drawImage(video, 0, 0, 640, 480);
                         convertCanvasToImage();
@@ -51,6 +50,7 @@ $(function() {
                 alert(message);
                 navigator.webkitGetUserMedia(videoObj, function(stream) {
                     video.src = window.webkitURL.createObjectURL(stream);
+                    alert("gabi：" + stream);
                     video.play();
                     $('#snap').click(function() {
                         if($('#cream_loading').css("display") == "none") {
@@ -58,8 +58,7 @@ $(function() {
                         } else {
                             $('#cream_loading').hide();
                         }
-                        // $('#cream_loading').toggle();
-                        alert("gabi");
+                        
                         context.drawImage(video, 0, 0);
                         convertCanvasToImage();
                     });
