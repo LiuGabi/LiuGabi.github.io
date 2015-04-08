@@ -14,7 +14,7 @@ $(function() {
                 errBack = function(error) {
                     if (error.PERMISSION_DENIED) {
                         alert('用户拒绝了浏览器请求媒体的权限');
-                    } else if (error.NOT_SUPPORTED_ERROR) {
+                    } else  if (error.NOT_SUPPORTED_ERROR) {
                         alert('对不起，您的浏览器不支持拍照功能，请使用其他浏览器');
                     } else if (error.MANDATORY_UNSATISFIED_ERROR) {
                         alert('指定的媒体类型未接收到媒体流');
@@ -153,7 +153,7 @@ function convertCanvasToImage(canvas) {
 
     var myDate = new Date();
     var filename = myDate.getTime();
-    $.post("/Article/SavePhoto", {
+    $.post("/upload/", {
         data: b64,
         name: filename
     }, function(result) {

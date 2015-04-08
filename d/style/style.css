@@ -23,19 +23,6 @@
 	background: url(../images/loading.gif) center center #3E6B61 no-repeat;
 }
 
-
-#snap img {
-	width: 30px;
-	display: block;
-	margin: 20px auto;
-}
-
-#scan {
-	width: 30px;
-	height: 30px;
-}
-
-
 .camera-box {
 	position: fixed;
 	bottom: 0px;
@@ -154,14 +141,18 @@
   border-radius: 50%;
 }
 .flare:after, .flare:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
-.scan-pic {
-	position: absolute;
-	top: 50px;
-	right: 10px;
+.thumbnail {
+  	position: absolute;
+  	top: 50px;
+  	right: 10px;
+}
+#scan {
+    width: 40px;
+    height: 40px;
 }
