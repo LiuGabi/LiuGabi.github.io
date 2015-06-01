@@ -51,6 +51,7 @@
   border-bottom-left-radius: 12%;
   border-bottom-right-radius: 12%;
   box-shadow: 0 0.5em 0.71429em rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 .camera-body:before {
   width: 2.5em;
