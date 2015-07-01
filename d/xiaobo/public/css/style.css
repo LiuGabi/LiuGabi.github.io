@@ -89,18 +89,86 @@ footer .copyright {
 }
 
 
-/* home page */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-width: 736px),
-only screen and (min-resolution: 144dpi) and (min-width: 736px),
-only screen and (min-resolution: 144dppx) and (min-width: 736px) {
-	.page-home .promos .promo-world-gallery {
-		background-image: url(../images/home/promo_appletv_hbonow_large.jpg);
-	}
+/* blog */
+.blog {
+	padding: 50px;
+}
+.blog .name {
+	padding-bottom: 50px;
+	font-size: 40px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.blog .list {
+	position: relative;
+	padding: 50px 50px 50px 100px;
+	background-color: #F2F2F2;
+}
+.blog .list .time {
+	position: absolute;
+	padding: 5px 15px 5px 55px;
+	left: -30px;
+	top: 45px;
+	color: #fff;
+	background-color: #13C3BD;
+	text-align: right;
+}
+.blog .list .time span {
+	display: block;
+}
+.blog .list .time span.day {
+	font-size: 20px;
+}
+.blog .list .time span.year {
+	font-size: 12px;
+}
+.blog .list .time .shadow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 7px;
+	top: 33px;
+	background-color: #07A19C;
+	-moz-transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	transform: rotate(30deg);
+	z-index: -1;
+}
+.blog .list .title {
+	margin-bottom: 25px;
+	color: #13C3BD;
+	text-align: center;
+	font-size: 30px;
+}
+.blog .list .comment {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 1px solid #CBC6C6;
+	text-align: right;
 }
 
 
 
-
+header:before,
+.navbar-header:before,
+.navbar-collapse:before,
+.container:before,
+.nav:before,
+header:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.container:after,
+.nav:after {
+	content: " ";
+	display: table;
+}
+header:after,
+.navbar-header:after,
+.navbar-collapse:after,
+.container:after,
+.nav:after {
+	clear: both;
+}
 
 @media (min-width: 1200px) {
 	.container {
@@ -135,25 +203,4 @@ only screen and (min-resolution: 144dppx) and (min-width: 736px) {
 	.dropdown-menu {
 		right: 0;
 	}
-}
-
-header:before,
-.navbar-header:before,
-.navbar-collapse:before,
-.container:before,
-.nav:before,
-header:after,
-.navbar-header:after,
-.navbar-collapse:after,
-.container:after,
-.nav:after {
-	content: " ";
-	display: table;
-}
-header:after,
-.navbar-header:after,
-.navbar-collapse:after,
-.container:after,
-.nav:after {
-	clear: both;
 }

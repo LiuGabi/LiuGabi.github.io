@@ -3,12 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index', { title: 'XiaoBo' });
+	res.render('default/', { title: 'XiaoBo' });
 });
 
 /* GET demo page. */
 router.get('/demo', function(req, res, next) {
-	res.render('demo/index', { title: 'XiaoBo - Demo' });
+	res.render('demo/', { title: 'XiaoBo - Demo' });
 });
 
 module.exports = router;

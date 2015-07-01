@@ -13,11 +13,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	background: transparent;
 }
 body {
-	font-family: 'Raleway',"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: Microsoft YaHei,微软雅黑, Arial, Helvetica, sans-serif;
 	color: #444;
 	text-rendering: optimizeLegibility;
 	background: #fff;
-	font-size: 14px;
+	font-size: 16px;
+}
+p {
+	line-height: 25px;
 }
 ul {
 	list-style: none;
@@ -25,11 +28,4 @@ ul {
 a{
 	text-decoration: none;
 	color: #428bca;
-}
-.title {
-	padding-top: 280px;
-	padding-right: 100px;
-	text-align: right;
-	color: #fff;
-	font-size: 60px;
 }
