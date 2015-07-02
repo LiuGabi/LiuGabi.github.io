@@ -7,11 +7,13 @@ header {
 }
 .navbar-header .navbar-brand {
 	float: left;
+	width: 80px;
+	height: 80px;
 	padding: 5px;
-	height: 42px;
 }
-.navbar-collapse {
-
+.navbar-header .navbar-brand img {
+	display: block;
+	width: 100%;
 }
 .nav>li>a {
 	position: relative;
@@ -192,14 +194,6 @@ header:after,
 @media (min-width: 720px) {
 	.navbar-header {
 		float: left;
-	}
-	.navbar-header .navbar-brand {
-		height: 80px;
-		padding: 22px 15px;
-		text-transform: uppercase;
-	}
-	.navbar-collapse {
-
 	}
 	.nav-right {
 		float: right;
