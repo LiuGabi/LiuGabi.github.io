@@ -59,7 +59,14 @@ footer {
 	background-color: #008C95;
 	color: #8C8989;
 }
-footer .logo,
+footer .logo {
+	width: 80px;
+	margin: 0 auto;
+}
+footer .logo img {
+	display: block;
+	width: 100%;
+}
 footer .copyright {
 	padding-top: 5px;
 	padding-bottom: 5px;
@@ -101,6 +108,20 @@ footer .copyright {
 	zoom: 1;
 }
 
+/* button */
+button,
+.button {
+	border: none;
+	padding: 10px 25px;
+	color: #fff;
+	outline: none;
+	background-color: #13C3BD;
+	cursor: pointer;
+}
+button:hover,
+.button:hover {
+	background-color: #008C95;
+}
 
 /* blog */
 .blog {
@@ -155,13 +176,54 @@ footer .copyright {
 	text-align: center;
 	font-size: 30px;
 }
-.blog .list .comment {
+.blog .list .num {
 	margin-top: 20px;
 	padding-top: 20px;
 	border-top: 1px solid #CBC6C6;
 	text-align: right;
 }
-
+.blog .comment {
+	margin-top: 15px;
+	padding-top: 15px;
+	border-top: 1px solid #CBC6C6;
+}
+.blog .comment .box {
+	text-align: right;
+}
+.blog .comment .box textarea {
+	width: 100%;
+	height: 100px;
+	padding: 10px;
+	resize: none;
+	border: 1px solid #CBC6C6;
+	outline: none;
+}
+.blog .comment .box input {
+	width: 100%;
+	height: 35px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	padding: 10px;
+	border: 1px solid #CBC6C6;
+	outline: none;
+}
+.blog .comment .comment-list {
+	padding: 10px 0;
+}
+.blog .comment .comment-list li {
+	padding-bottom: 15px;
+}
+.blog .comment .comment-list li .nick-name {
+	margin-bottom: 5px;
+	color: #13C3BD;
+}
+.blog .comment .comment-list li p {
+	font-size: 14px;
+	color: #7F7878;
+}
+.blog .comment .comment-list li.reply .at {
+	color: #ED8537;
+}
 
 
 header:before,
