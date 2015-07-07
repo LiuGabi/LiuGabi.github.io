@@ -125,7 +125,7 @@ button:hover,
 
 /* blog */
 .blog {
-	padding: 50px 15px;
+	padding: 5px 15px;
 }
 .blog .name {
 	padding-bottom: 50px;
@@ -134,9 +134,28 @@ button:hover,
 	color: #ED8537;
 	text-transform: uppercase;
 }
+.blog .tags {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.blog .tags  span {
+	display: inline-block;
+	padding: 10px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	color: #fff;
+	cursor: pointer;
+	background-color: #CBC6C6;
+}
+.blog .tags  span:hover {
+	background-color: #13C3BD;
+}
+.blog .tags  span.selected {
+	background-color: #13C3BD;
+}
 .blog .list {
 	position: relative;
-	padding: 50px 50px 50px 100px;
+	padding: 10px 10px 10px 20px;
 	background-color: #fff;
 	margin-bottom: 40px
 }
@@ -144,7 +163,7 @@ button:hover,
 	position: absolute;
 	padding: 5px 15px 5px 55px;
 	left: -30px;
-	top: 45px;
+	top: 10px;
 	color: #fff;
 	background-color: #FFCC33;
 	text-align: right;
@@ -230,7 +249,7 @@ header:before,
 .navbar-header:before,
 .navbar-collapse:before,
 .container:before,
-.nav:before,
+.row :before,
 header:after,
 .navbar-header:after,
 .navbar-collapse:after,
@@ -253,7 +272,19 @@ header:after,
 	}
 }
 
-@media (min-width: 720px) {
+@media (min-width: 960px) {
+	.blog {
+		padding: 50px 15px;
+	}
+	.blog .list {
+		padding: 50px 50px 50px 100px;
+	}
+	.blog .list .time {
+		top: 45px;
+	}
+}
+
+@media (min-width: 320px) {
 	.navbar-header {
 		float: left;
 	}

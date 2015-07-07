@@ -6,14 +6,19 @@ router.get('/', function(req, res, next) {
 	res.render('default/', { title: 'XiaoBo' });
 });
 
-/* get demo page. */
-router.get('/demo', function(req, res, next) {
-	res.render('demo/', { title: 'XiaoBo - Demo' });
-});
-
-/* get detail page. */
+/* get blog detail page. */
 router.get('/detail', function(req, res, next) {
 	res.render('default/detail', { title: 'XiaoBo - Detail' });
+});
+
+/* get tag page. */
+router.get('/tag', function(req, res, next) {
+	res.render('default/tag', { title: 'XiaoBo - Tag' });
+});
+
+/* get classify page. */
+router.get('/leave-word', function(req, res, next) {
+	res.render('default/leave-word', { title: 'XiaoBo - Classify' });
 });
 
 module.exports = router;
