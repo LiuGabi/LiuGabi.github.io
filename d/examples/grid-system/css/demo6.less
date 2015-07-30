@@ -81,3 +81,15 @@
 		}
 	}
 }
+
+// 函数 & 运算
+@the-border: 1px;
+@base-color: #111;
+@red: #842210;
+
+.test2 {
+	color: @base-color * 3;
+	background-color: @base-color;
+	border-left: @the-border;
+	border-right: @the-border * 2;
+}
