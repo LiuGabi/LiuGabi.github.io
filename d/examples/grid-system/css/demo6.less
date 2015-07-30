@@ -38,7 +38,7 @@
 
 
 // 混合 mixin
-.round-corners (@radius: 5px;) {
+.round-corners (@radius: 5px, @background-color: @info) {
 	border-radius: @radius;
 	-webkit-border-radius: @radius;
 	-moz-border-radius: @radius;
@@ -46,7 +46,7 @@
 	padding: 50px;
 	text-align: center;
 	color: @white;
-	background-color: @info;
+	background-color: @background-color;
 }
 
 .header {
@@ -55,5 +55,5 @@
 }
 
 .footer {
-	.round-corners(20px);
+	.round-corners(20px, @gray);
 }
