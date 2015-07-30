@@ -1,13 +1,27 @@
-// 变量
+// 变量 --- 颜色 --- 色彩管理
 
-@color: #fe33ac;
-@font-size-s: 14px;
-@font-size-m: 18px;
+@primary: darken(#428bca, 6.5%); // #337ab7
+@success: #5cb85c;
+@info:    #5bc0de;
+@warning: #f0ad4e;
+@danger:  #d9534f;
+@gray: lighten(#000, 33.5%); // #555
 
-.header {
-	color: @color;
-	font-size: @font-size-s;
+.primary {
+	background-color: @primary;
 }
-h2 {
-	font-size: @font-size-m;
+.success {
+	background-color: @success;
+}
+.info {
+	background-color: @info;
+}
+.warning {
+	background-color: @warning;
+}
+.danger {
+	background-color: @danger;
+}
+.gray {
+	background-color: @gray;
 }
