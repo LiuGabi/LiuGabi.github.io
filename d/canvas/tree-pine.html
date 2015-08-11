@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <title>Tree - pine</title>
+</head>
+<body>
+  <div class="container">
+    <canvas id="drawing" style="background-color: #ddd;">A pine tree.</canvas>
+  </div>
+  <script type="text/javascript" src="../../style/js/tree.pine.js"></script>
+  <script type="text/javascript">
+
+      var drawing = document.getElementById("drawing");
+
+      drawing.width = 640;
+      drawing.height = 480;
+
+      if (drawing.getContext) {
+
+         var context = drawing.getContext("2d");
+
+         drawTree(context, 320, 470, 60, -Math.PI / 2, 12, 12);
+
+      }
+
+  </script>
+</body>
+</html>
