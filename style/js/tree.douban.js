@@ -1,6 +1,6 @@
 var douban = {
 
-    circle: function(context, x, y, r, color) {
+    leaves: function(context, x, y, r, color) {
 
         // 画圆形路径
         context.save();
@@ -39,7 +39,7 @@ var douban = {
         context.fillStyle = "#4C3D33";
         context.fill();
 
-        context.clearRect(0, 15, 120, 1);
+        context.clearRect(0, 15, 120, 2);
         context.clearRect(0, 60, 120, 40);
 
         context.closePath();
@@ -66,7 +66,29 @@ var douban = {
         context.restore();
 
     },
-    leaves: function(context, r) {
+    branches: function(context, offsetX, offsetY, offsetH, color, x, y) {
+
+        var x1 = 0, y1 = 0,
+            x2 = x1 + offsetX, y2 = y1 + offsetY,
+            x3 = x2, y3 = y2 + offsetH; 
+
+        context.save();
+
+        context.beginPath();
+
+        context.translate(x, y);
+
+        context.moveTo(x1, x1);
+        context.lineTo(x2, y2);
+        context.lineTo(x3, y3);
+
+        context.fillStyle = color;
+
+        context.fill();
+
+        context.closePath();
+
+        context.restore();
 
     },
     init: function(id) {
@@ -79,10 +101,25 @@ var douban = {
             var context =  canvas.getContext("2d");
 
             this.faceplate(context, 100);
+
             this.trunk(context, 420, 244, 380, 8, "#365D4F");
             this.trunk(context, 420, 252, 380, 8, "#527A64");
             this.trunk(context, 420, 260, 380, 8, "#629278");
-            this.circle(context, 244, 380, 60, "#3E9A72");
+
+            // 树枝顺序从下往上，从左往右
+            this.branches(context, 120, 20, 20, "#365D4F", 124, 520);
+            this.branches(context, 80, 100, 20, "#365D4F", 164, 340);
+            this.branches(context, -80, 100, 20, "#629278", 348, 370);
+            this.branches(context, -100, 40, 20, "#527A64", 368, 460);
+            this.branches(context, -100, -20, 20, "#527A64", 368, 580);
+
+            // 叶子顺序从下往上，从左往右
+            this.leaves(context, 140, 520, 50, "#365D4F");
+            this.leaves(context, 180, 360, 40, "#365D4F");
+            this.leaves(context, 254, 325, 60, "#3E9A72");
+            this.leaves(context, 340, 380, 20, "#DEAE7D");
+            this.leaves(context, 380, 460, 32, "#ACD08E");
+            this.leaves(context, 370, 580, 36, "#77C1A3");
 
         }
 
