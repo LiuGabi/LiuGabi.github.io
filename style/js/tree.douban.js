@@ -1,25 +1,5 @@
 var douban = {
 
-    // leaves: function(context, x, y, r, color) {
-
-    //     // 画圆形路径
-    //     context.save();
-
-    //     context.beginPath();
-
-    //     context.translate(x, y);
-
-    //     context.arc(0, 0, r, 0, 2*Math.PI, false);
-
-    //     context.fillStyle = color;
-    //     context.fill();
-
-    //     context.closePath();
-
-    //     context.restore();
-
-
-    // },
     leaves: function(context, a, b, r, color, sawtoothCount, sawtoothHeight) {
 
         context.beginPath();
