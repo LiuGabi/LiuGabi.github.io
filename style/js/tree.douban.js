@@ -107,6 +107,10 @@ var douban = {
 
         var canvas = document.getElementById(id);
 
+        canvas.width = document.body.clientWidth;
+        // canvas.height = document.body.clientHeight;
+        canvas.height = document.body.clientHeight - 2;
+
 
         if(canvas.getContext) {
 
