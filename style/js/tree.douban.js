@@ -1,15 +1,49 @@
 var douban = {
 
-    leaves: function(context, x, y, r, color) {
+    // leaves: function(context, x, y, r, color) {
 
-        // 画圆形路径
-        context.save();
+    //     // 画圆形路径
+    //     context.save();
+
+    //     context.beginPath();
+
+    //     context.translate(x, y);
+
+    //     context.arc(0, 0, r, 0, 2*Math.PI, false);
+
+    //     context.fillStyle = color;
+    //     context.fill();
+
+    //     context.closePath();
+
+    //     context.restore();
+
+
+    // },
+    leaves: function(context, a, b, r, color, sawtoothCount, sawtoothHeight) {
 
         context.beginPath();
 
-        context.translate(x, y);
+        context.save();
 
-        context.arc(0, 0, r, 0, 2*Math.PI, false);
+        context.moveTo(a + r, b);
+
+        var angle = 360 / sawtoothCount;
+        var PI = Math.PI;
+
+        for(var j = 0; j < sawtoothCount; j++){
+
+            inX = a + r * Math.cos((angle * j * PI) / 180);
+            inY = b + r * Math.sin((angle * j * PI) / 180);
+
+            context.lineTo(inX, inY);
+
+            outX = a + (r + sawtoothHeight) * Math.cos(((angle * j + angle * 0.5) * PI) / 180);
+            outY = b + (r + sawtoothHeight) * Math.sin(((angle * j + angle * 0.5) * PI) / 180);
+
+            context.lineTo(outX,outY);
+
+        }
 
         context.fillStyle = color;
         context.fill();
@@ -17,8 +51,6 @@ var douban = {
         context.closePath();
 
         context.restore();
-
-
     },
     faceplate: function(context, h) {
 
@@ -114,12 +146,12 @@ var douban = {
             this.branches(context, -100, -20, 20, "#527A64", 368, 580);
 
             // 叶子顺序从下往上，从左往右
-            this.leaves(context, 140, 520, 50, "#365D4F");
-            this.leaves(context, 180, 360, 40, "#365D4F");
-            this.leaves(context, 254, 325, 60, "#3E9A72");
-            this.leaves(context, 340, 380, 20, "#DEAE7D");
-            this.leaves(context, 380, 460, 32, "#ACD08E");
-            this.leaves(context, 370, 580, 36, "#77C1A3");
+            this.leaves(context, 140, 520, 50, "#365D4F", 18, 9);
+            this.leaves(context, 180, 360, 40, "#365D4F", 16, 9);
+            this.leaves(context, 254, 325, 60, "#3E9A72", 22, 10);
+            this.leaves(context, 340, 380, 20, "#DEAE7D", 12, 6);
+            this.leaves(context, 380, 460, 32, "#ACD08E", 14, 8);
+            this.leaves(context, 370, 580, 36, "#77C1A3", 16, 8);
 
         }
 
