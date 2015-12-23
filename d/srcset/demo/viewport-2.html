@@ -9,6 +9,7 @@
 <meta name="keywords" content="">
 <style type="text/css">
 	body {
+		margin: 0;
 		font-family: wf_segoe-ui_normal,'Segoe UI',Segoe,'Segoe WP',Tahoma,Verdana,Arial,sans-serif;
 	}
 	h2 {
@@ -31,14 +32,11 @@
 <body>
     <div class="wrap">
 	    <div class="viewport-based">
-	    	<h2>Viewport based selection</h2>
-			<p>srcset \ sizes \ w \ src 在 img 标签上。[ src 参与资源选择 ]</p>
-	    	<p class="bg-yellow"><strong>Note:</strong> 当图像的渲染尺寸依赖视口宽 (<span class="red">viewport-based selection</span>) 时，描述器 <span class="red"></span></p>
 	    	<p style="color:#987A7A;">
 	    		<strong>Demo2</strong>
 	    	</p>
 	    	<div>
-	    		<img sizes="(max-width: 360px) 340px, 200px"  srcset="images/viewport-200.jpg 200w, images/viewport-400.jpg 400w, images/viewport-600.jpg 600w" >
+	    		<img sizes="(max-width: 360px) 340px, 200px"  srcset="images/viewport-200.jpg 200w, images/viewport-400.jpg 400w, images/viewport-600.jpg 600w" src="images/viewport-100.jpg">
 	    	</div>
 	    </div>
     </div>
