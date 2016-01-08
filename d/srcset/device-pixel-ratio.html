@@ -39,9 +39,14 @@
 	    		<strong>Demo</strong>
 	    	</p>
 	    	<div>
-	    		<img src="images/device-pixel-ratio-1x.jpg" srcset="images/device-pixel-ratio-1.5x.jpg 1.5x, images/device-pixel-ratio-2x.jpg 2x">
+	    		<img id="js-srcset" src="images/device-pixel-ratio-1x.jpg" srcset="images/device-pixel-ratio-1.5x.jpg 1.5x, images/device-pixel-ratio-2x.jpg 2x">
 	    	</div>
 	    </div>
     </div>
+    <script type="text/javascript">
+    	var imgUrls = "images/device-pixel-ratio-1.5x.jpg?" + Date.parse(new Date()) + " 1.5x,"
+    				+ "images/device-pixel-ratio-2x.jpg?" + Date.parse(new Date()) + " 2x";
+    	document.getElementById("js-srcset").srcset = imgUrls;
+    </script>
 </body>
 </html>
