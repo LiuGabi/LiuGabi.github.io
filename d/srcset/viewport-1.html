@@ -45,12 +45,18 @@
 	    		<strong>Demo1</strong>
 	    	</p>
 	    	<div>
-	    		<img sizes="100px"  srcset="images/viewport-200.jpg 200w, images/viewport-400.jpg 400w, images/viewport-600.jpg 600w" src="images/viewport-200.jpg">
+	    		<img id="js-srcset" sizes="100px"  srcset="images/viewport-200.jpg 200w, images/viewport-400.jpg 400w, images/viewport-600.jpg 600w" src="images/viewport-200.jpg">
 	    	</div>
 	    	<p class="bg-yellow">0 ~ 2.8x 显示 viewport-200.jpg</p>
 	    	<p class="bg-yellow">2.9x ~ 4.8x 显示 viewport-400.jpg</p>
 	    	<p class="bg-yellow">4.9x ~ 00x 显示 viewport-600.jpg</p>
 	    </div>
     </div>
+    <script type="text/javascript">
+    	var imgUrls = "images/viewport-200.jpg?" + Date.parse(new Date()) + " 200w,"
+    				+ "images/viewport-400.jpg?" + Date.parse(new Date()) + " 400w,"
+    				+ "images/viewport-600.jpg?" + Date.parse(new Date()) + " 600w";
+    	document.getElementById("js-srcset").srcset = imgUrls;
+    </script>
 </body>
 </html>
