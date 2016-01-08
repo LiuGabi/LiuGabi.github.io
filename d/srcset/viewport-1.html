@@ -14,7 +14,27 @@
 	</div>
 	<div class="container">
 		<div class="bs-callout bs-callout-info">
-			<h4>当 sizes 为 100vw 时</h4>
+			<h4>所用到的属性：srcset sizes，此时：</h4>
+			<p>
+				<strong>srcset</strong>: 相当于一个资源库
+			</p>
+			<p>
+				<strong>sizes</strong>:
+			</p>
+			<ul>
+				<li>
+					当<strong>sizes</strong>设为100vw时，此时图片的渲染尺寸<strong>（物理像素尺寸）</strong>，因为无论浏览器的缩放大小<strong>（不是浏览器大小）</strong>如何，我们看到的图片大小是不变的。
+				</li>
+			</ul>
+			<h4>所用到的单位：w vw</h4>
+			<ul>
+				<li>
+					<strong>w</strong>：描述器，和device-pixel-ratio有关
+				</li>
+				<li>
+					<strong>vw</strong>：单位，相对浏览器可是窗口的计算单位，pc机上chrome浏览器将滚动条的宽度也计算在内，此时设置100vw时，纵向内容过高导致的纵向滚动条出现，那么此时设置的100vw将导致横向滚动条的出现。
+				</li>
+			</ul>
 		</div>
 		<div class="bs-callout bs-callout-danger">
 			<p class="text-danger">Note: 当缩小放大浏览器时，图片的显示区域并不变化，因为 <strong>vw</strong> 单位是以窗口可视区域的宽度进行计算，是一个类似百分比(%)的单位</p>
