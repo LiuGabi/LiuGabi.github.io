@@ -4,11 +4,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Srcset | viewport vw</title>
+<title>Srcset | viewport ???</title>
 <link rel="stylesheet" type="text/css" href="../../style/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../../style/css/docs.min.css">
 </head>
 <body>
+	<div>
+		<img id="js-srcset" sizes="100vw" srcset="images/tree-320.jpg 320w, images/tree-400.jpg 400w, images/tree-800.jpg 800w, images/tree-1200.jpg 1200w, images/tree-1600.jpg 1600w, images/tree-2000.jpg 2000w, images/tree-2600.jpg 2600w" src="images/tree-320.jpg">
+	</div>
 	<div class="container">
 		<div class="bs-callout bs-callout-info">
 			<h4>当 sizes 为 100vw 时</h4>
@@ -21,13 +24,14 @@
 			<p>当浏览器纵向滚动条出现的时候，vw 计算也包括滚动条的宽度</p>
 		</div>
 	</div>
-	<div>
-		<img id="js-srcset" sizes="100vw" srcset="images/viewport-100.jpg 100w, images/viewport-200.jpg 200w, images/viewport-400.jpg 400w" src="images/viewport-100.jpg">
-	</div>
     <script type="text/javascript">
-    	var imgUrls = "images/viewport-100.jpg?" + Date.parse(new Date()) + " 100w,"
-    				+ "images/viewport-200.jpg?" + Date.parse(new Date()) + " 200w,"
-    				+ "images/viewport-400.jpg?" + Date.parse(new Date()) + " 400w";
+    	var imgUrls = "images/tree-320.jpg?" + Date.parse(new Date()) + " 320w,"
+    				+ "images/tree-400.jpg?" + Date.parse(new Date()) + " 400w,"
+    				+ "images/tree-800.jpg?" + Date.parse(new Date()) + " 800w"
+    				+ "images/tree-1200.jpg?" + Date.parse(new Date()) + " 1200w,"
+    				+ "images/tree-1600.jpg?" + Date.parse(new Date()) + " 1600w,"
+    				+ "images/tree-2000.jpg?" + Date.parse(new Date()) + " 2000w,"
+    				+ "images/tree-2600.jpg?" + Date.parse(new Date()) + " 2600w";
     	document.getElementById("js-srcset").srcset = imgUrls;
     </script>
 </body>
