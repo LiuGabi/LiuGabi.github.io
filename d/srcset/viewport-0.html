@@ -8,13 +8,13 @@
 <link rel="stylesheet" type="text/css" href="/style/css/bootstrap.css">
 </head>
 <body>
+	   	<img id="js-srcset" style="display: block;" sizes="100vw"  srcset="images/viewport-100.jpg 100w, images/viewport-200.jpg 200w, images/viewport-400.jpg 400w" src="images/viewport-100.jpg">
     <div class="container">
-	   	<img id="js-srcset" sizes="100px"  srcset="images/viewport-200.jpg 200w, images/viewport-400.jpg 400w, images/viewport-600.jpg 600w" src="images/viewport-200.jpg">
     </div>
     <script type="text/javascript">
-    	var imgUrls = "images/viewport-200.jpg?" + Date.parse(new Date()) + " 200w,"
-    				+ "images/viewport-400.jpg?" + Date.parse(new Date()) + " 400w,"
-    				+ "images/viewport-600.jpg?" + Date.parse(new Date()) + " 600w";
+    	var imgUrls = "images/viewport-200.jpg?" + Date.parse(new Date()) + " 100w,"
+    				+ "images/viewport-400.jpg?" + Date.parse(new Date()) + " 200w,"
+    				+ "images/viewport-600.jpg?" + Date.parse(new Date()) + " 400w";
     	document.getElementById("js-srcset").srcset = imgUrls;
     </script>
 </body>
