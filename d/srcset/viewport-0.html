@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Srcset | viewport</title>
+<link rel="stylesheet" type="text/css" href="/style/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+	   	<img id="js-srcset" sizes="100px"  srcset="images/viewport-200.jpg 200w, images/viewport-400.jpg 400w, images/viewport-600.jpg 600w" src="images/viewport-200.jpg">
+    </div>
+    <script type="text/javascript">
+    	var imgUrls = "images/viewport-200.jpg?" + Date.parse(new Date()) + " 200w,"
+    				+ "images/viewport-400.jpg?" + Date.parse(new Date()) + " 400w,"
+    				+ "images/viewport-600.jpg?" + Date.parse(new Date()) + " 600w";
+    	document.getElementById("js-srcset").srcset = imgUrls;
+    </script>
+</body>
+</html>

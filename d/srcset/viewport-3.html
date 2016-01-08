@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Srcset | viewport</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style type="text/css">
+	body {
+		margin: 0;
+		font-family: wf_segoe-ui_normal,'Segoe UI',Segoe,'Segoe WP',Tahoma,Verdana,Arial,sans-serif;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	p {
+		font-size: 14px;
+	}
+	.red {
+		color: red;
+	}
+	.bg-yellow {
+		background-color: #DEDEA7;
+	}
+	.wrap {
+		margin: 0 auto;
+	}
+</style>
+</head>
+<body>
+    <div class="wrap">
+	    <div class="viewport-based">
+	    	<h2>Viewport based selection</h2>
+			<p><strong>属性</strong>: srcset \ sizes \ w \ src \ vm \ w \ h 在 img 标签上</p>
+			<p><strong>srcset</strong>: 资源库</p>
+			<p><strong>sizes</strong>: 条件</p>
+			<p><strong>vw / vh</strong>: 视窗单位。</p>
+			<p><strong>w</strong>: 描述器（指定作用），图片的规格</p>
+			<p><strong>user agent 选择图片的条件</strong>: 1.sizes 2.有效的像素密度 3.w 描述器</p>
+			<p><span class="red">最佳设备像素比 device pixel ratio = w / sizes 结果 </span></p>			
+	    	<p class="bg-yellow"><strong>Note:</strong> src 不参与资源选择，为兼容性而设置，当srcset设置了w描述时，新的user agents将忽略src。</p>
+	    	<p style="color:#987A7A;">
+	    		<strong>Demo1</strong>
+	    	</p>
+	    	<div>
+	    		<img id="js-srcset" sizes="100px"  srcset="images/viewport-200.jpg 200w, images/viewport-400.jpg 400w, images/viewport-600.jpg 600w" src="images/viewport-200.jpg">
+	    	</div>
+	    	<p class="bg-yellow">0 ~ 2.8x 显示 viewport-200.jpg</p>
+	    	<p class="bg-yellow">2.9x ~ 4.8x 显示 viewport-400.jpg</p>
+	    	<p class="bg-yellow">4.9x ~ 00x 显示 viewport-600.jpg</p>
+	    </div>
+    </div>
+    <script type="text/javascript">
+    	var imgUrls = "images/viewport-200.jpg?" + Date.parse(new Date()) + " 200w,"
+    				+ "images/viewport-400.jpg?" + Date.parse(new Date()) + " 400w,"
+    				+ "images/viewport-600.jpg?" + Date.parse(new Date()) + " 600w";
+    	document.getElementById("js-srcset").srcset = imgUrls;
+    </script>
+</body>
+</html>
