@@ -157,10 +157,9 @@
 		<div class="bs-callout bs-callout-danger">
 			<ul class="text-danger">
 				<li>Note: 当缩小放大浏览器时，图片的显示区域并不变化，因为 <strong>vw</strong> 单位是以窗口可视区域的宽度进行计算，是一个类似百分比(%)的单位</li>
-				<li>Note: 当缩放浏览器时，图片显示区域不因 device-pixel-ratio 的改变而改变，因为渲染大小已经确定，计算机根据渲染尺寸和自身的已知设备像素比计算出对应的w值，w值最接近srcset资源库中的哪个w值就选哪张图片显示</li>
+				<li>Note: 当缩放浏览器时，图片显示区域不因 device-pixel-ratio 的改变而改变，因为渲染大小已经确定，计算机根据渲染尺寸和自身的已知固有的设备像素比（也就是说因放大而变化的device-pixel-ratio此时不起作用了，此处将在浏览器放大一节中做出相应的解释，感觉和fixed定位有点相似）计算出对应的w值，w值最接近srcset资源库中的哪个w值就选哪张图片显示</li>
 			</ul>
 		</div>
-		<div id="dd">lll</div>
 	</div>
     <script type="text/javascript">
     	var imgUrls = "images/tree-320.jpg?" + Date.parse(new Date()) + " 320w,"
@@ -171,7 +170,6 @@
     				+ "images/tree-2000.jpg?" + Date.parse(new Date()) + " 2000w,"
     				+ "images/tree-2600.jpg?" + Date.parse(new Date()) + " 2600w";
     	document.getElementById("js-srcset").srcset = imgUrls;
-    	document.getElementById("dd").innerHTML = window.outerWidth;
     </script>
 </body>
 </html>
