@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Srcset | viewport ???</title>
+<title>Srcset | viewport sizes 理解</title>
 <link rel="stylesheet" type="text/css" href="../../style/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="../../style/css/docs.min.css">
 </head>
@@ -15,30 +15,117 @@
 	<div class="container">
 		<div class="bs-callout bs-callout-danger">
 			<ul class="text-danger">
+				<li style="padding: 10px 0;">
+					<code>
+						&lt;img img id="js-srcset" sizes="100vw" srcset="images/tree-320.jpg 320w, images/tree-400.jpg 400w, images/tree-800.jpg 800w, images/tree-1200.jpg 1200w, images/tree-1600.jpg 1600w, images/tree-2000.jpg 2000w, images/tree-2600.jpg 2600w" src="images/tree-320.jpg"&gt;
+					</code>
+				</li>
 				<li>此种情况 sizes="100vw"，用户代理为每一张图片计算有效的像素密度（物理像素密度），这些图片来自 w descriptors 和 sizes 属性中的渲染大小指定。对于已给定的资源选择依赖于用户屏幕的物理像素密度，缩放级别或者其他的因素，比如用户网络条件。</li>
 				<li>
-					<p>基于上面的banner例子，如果用户的屏幕是 320 css pixel宽度 <strong>（此时很好理解 content="width=device-width" ，页面文档宽度等于设备物理宽度，注意不是设备物理像素宽度，文档宽度等于设备物理宽度就意味着确定一个css像素对应几个设备物理像素）</strong>，这就相当于指定 tree-320.jpg 1x, tree-400.jpg 1.25, tree-800.jpg 2.5x, tree-1200.jpg 3.75x, tree-1600 5x, tree-2000.jpg 6.25x, tree-2600.jpg 8.125x。如果用户的屏幕是 1200 css pixel宽度时，就相当于指定 tree-320.jpg 0.27x, tree-400.jpg 0.33x, tree-800.jpg 0.67x, tree-1200.jpg 1x, tree-1600 1.33x, tree-2000.jpg 1.67x, tree-2600.jpg 2.17x。</p>
+					<p>基于上面的banner例子，如果用户的屏幕是 320 css pixel宽度 <strong>（此时很好理解 content="width=device-width" ，页面文档宽度等于设备物理宽度，注意不是设备物理像素宽度，文档宽度等于设备物理宽度就意味着确定一个css像素对应几个设备物理像素）</strong>，这就相当于指定 tree-320.jpg 1x, tree-400.jpg 1.25x, tree-800.jpg 2.5x, tree-1200.jpg 3.75x, tree-1600 5x, tree-2000.jpg 6.25x, tree-2600.jpg 8.125x。如果用户的屏幕是 1200 css pixel宽度时，就相当于指定 tree-320.jpg 0.27x, tree-400.jpg 0.33x, tree-800.jpg 0.67x, tree-1200.jpg 1x, tree-1600 1.33x, tree-2000.jpg 1.67x, tree-2600.jpg 2.17x。</p>
 					<div class="bs-example">
 						<div class="panel panel-default">
-							<div class="panel-heading">基于以上第二点进行数学公式推算：</div>
-								<table class="table">
-									<thead>
-										<tr>
-											<th>屏幕宽（css像素）</th>
-											<th>图片大小</th>
-											<th>w descriptor 值</th>
-											<th>device pixel ratio</th>
-										</tr>
-									</thead>
-									<tbody>
+							<div class="panel-heading">基于以上第二点进行从计算机的角度理解并以数学公式推导：</div>
+							<table class="table">
+								<thead>
 									<tr>
-										<th>320 css pixel</th>
+										<th>图片渲染大小，即sizes所设置的大小（css像素）</th>
+										<th>图片大小（css像素）</th>
+										<th>w descriptor 值</th>
+										<th>device pixel ratio</th>
+										<th>公式</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th rowspan="7">320 css pixel</th>
 										<td>320</td>
+										<td>320w</td>
+										<td>1x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>400</td>
+										<td>400w</td>
+										<td>1.25x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>800</td>
+										<td>800w</td>
+										<td>2.5x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>1200</td>
+										<td>1200w</td>
+										<td>3.75x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>1600</td>
+										<td>1600w</td>
+										<td>5x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>2000</td>
+										<td>2000w</td>
+										<td>6.25x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>2600</td>
+										<td>2600w</td>
+										<td>8.125x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<th rowspan="7">1200 css pixel</th>
 										<td>320</td>
-										<td>320</td>
+										<td>320w</td>
+										<td>0.27x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>400</td>
+										<td>400w</td>
+										<td>0.33x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>800</td>
+										<td>800w</td>
+										<td>0.67x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>1200</td>
+										<td>1200w</td>
+										<td>1x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>1600</td>
+										<td>1600w</td>
+										<td>1.33x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>2000</td>
+										<td>2000w</td>
+										<td>1.67x</td>
+										<td>devicePixelRatio=w/sizes</td>
+									</tr>
+									<tr>
+										<td>2600</td>
+										<td>2600w</td>
+										<td>2.17x</td>
+										<td>devicePixelRatio=w/sizes</td>
 									</tr>
 								</tbody>
 							</table>
+							<div class="panel-footer">由以上的规律得出公式：devicePixelRatio=w/sizes，srcset中图片图片路径仅起到路径作用，w才是描述说明</div>
 						</div>
 					</div>
 				</li>
@@ -54,7 +141,7 @@
 			</p>
 			<ul>
 				<li>
-					当<strong>sizes</strong>设为100vw时，此时图片的渲染尺寸<strong>（物理像素尺寸）</strong>，因为无论浏览器的缩放大小<strong>（不是浏览器大小）</strong>如何，我们看到的图片大小是不变的。
+					当<strong>sizes</strong>设为100vw时，此为设置图片渲染大小，注意使用vw单位时无论浏览器的缩放大小<strong>（不是浏览器大小）</strong>如何，我们看到的图片大小是不会跟着缩放的。
 				</li>
 			</ul>
 			<h4>所用到的单位：w vw</h4>
@@ -70,7 +157,7 @@
 		<div class="bs-callout bs-callout-danger">
 			<ul class="text-danger">
 				<li>Note: 当缩小放大浏览器时，图片的显示区域并不变化，因为 <strong>vw</strong> 单位是以窗口可视区域的宽度进行计算，是一个类似百分比(%)的单位</li>
-				<li>Note: 当缩放浏览器时，图片显示区域不因 device-pixel-ratio 的改变而改变，正是因为 <strong>vw</strong> 的关系，此时</li>
+				<li>Note: 当缩放浏览器时，图片显示区域不因 device-pixel-ratio 的改变而改变，因为渲染大小已经确定，计算机根据渲染尺寸和自身的已知固有的设备像素比（也就是说因放大而变化的device-pixel-ratio此时不起作用了，此处将在浏览器放大一节中做出相应的解释，感觉和fixed定位有点相似）计算出对应的w值，w值最接近srcset资源库中的哪个w值就选哪张图片显示</li>
 			</ul>
 		</div>
 	</div>
