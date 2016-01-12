@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Responsive | embed</title>
+<style type="text/css">
+	* {
+		    box-sizing: border-box;
+	}
+	body {
+		margin: 0;
+	}
+	img {
+		display: block;
+		width: 100%;	
+	}
+/*	.lazy {
+		display: none;
+	}*/
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		zoom:1;
+	}
+	ul:after {
+		clear: both;
+		content: "";
+		display: block;
+		height: 0;
+	}
+	ul li {
+		padding: 5px;
+		background-color: #6BD3DE;
+	}
+	.embed-responsive {
+		position: relative;
+		display: block;
+		height: 0;
+		padding: 0;
+		padding-top: 50%;/* 根据父级的宽度进行计算，也就是li的宽度，因此只需对只需确定图片的高宽比即可 */
+		overflow: hidden;
+	}
+	.embed-responsive .embed-responsive-item {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		border: 0;
+		background-color: #ddd;
+		background-image: url(images/bg.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+	@media(min-width: 400px) {
+		ul li {
+			padding: 5px;
+			width: 25%;
+			background-color: #6BD3DE;
+			float: left;
+		}
+	}
+</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl4479_0.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl4479_1.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl4479_2.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl4479_3.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl5365_0.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl5365_1.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl5365_2.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl5365_3.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl5536_0.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl5536_1.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl5536_2.700x350.jpg">
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="embed-responsive">
+				<div class="embed-responsive-item ">
+					<img class="lazy" data-original="images/pl5536_3.700x350.jpg">
+				</div>
+			</div>
+		</li>
+	</ul>
+	<script type="text/javascript" src="../../style/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../../style/js/jquery.lazyload.min.js"></script>
+	<script type="text/javascript">
+		$("img.lazy").lazyload({
+		    threshold : 3000
+		});
+	</script>
+</body>
+</html>
