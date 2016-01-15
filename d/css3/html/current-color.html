@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/docs.min.css">
+<title>currentColor</title>
+<style type="text/css">
+    .icon {
+        display: inline-block;
+        *display: inline;
+        *zoom: 1;
+        width: 50px;
+        height: 50px;
+        background: url(img/icon-currentcolor.png) #ddd 0 0 no-repeat;
+    }
+    .icon.icon-sun {
+        background-position: -32px -32px;
+    }
+    .icon.icon-cloud {
+        background-position: -144px -32px;
+    }
+    .icon.icon-water {
+        background-position: -257px -32px;
+    }
+    .icon.icon-snow {
+        background-position: -373px -32px;
+    }
+    .text {
+        padding: 10px 0;
+        color: #ddd;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .text:hover {
+        color: #1B809E;
+        /*background-color: #1B809E;*/
+    }
+    .text:hover .icon {
+        background-color: currentColor;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="bs-callout bs-callout-info">
+            <h4>CSS3 属性值 currentColor</h4>
+        </div>
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="text">
+                    <i class="icon icon-sun"></i>
+                    Sun
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="text">
+                    <i class="icon icon-cloud"></i>
+                    Cloud
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="text">
+                    <i class="icon icon-water"></i>
+                    Water
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="text">
+                    <i class="icon icon-snow"></i>
+                    Snow
+                </div>
+            </div>
+        </div>
+        <div class="bs-callout bs-callout-danger">
+            <h4>Note:</h4>
+            <p>1. currentColor 色彩继承：色值继承自最近父级 color 的属性值。</p>
+            <p>2. 兼容性：IE9 及以上。</p>
+            <p>3. 题外：CSS Icon Sprite 镂空技术优点是可以通过改变颜色改变 icon，但是父级背景色不一致 Sprite 背景图就得准备多张。</p>
+        </div>
+    </div>
+</body>
+</html>

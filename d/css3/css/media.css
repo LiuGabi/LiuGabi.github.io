@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	background-color: #4ED8F5;
+}
+
+/* 定义媒体查询 */
+
+.mobile {
+	display: none
+}
+
+@media(min-width: 320px) {
+
+	.mobile {
+		display: block;
+	}
+	}
+.tablet {
+	display: none
+}
+@media(min-width: 768px) {
+
+	.tablet {
+		display: block;
+	}
+	}
+.desktop {
+	display: none
+}
+@media(min-width: 1024px) {
+
+	.desktop {
+		display: block;
+	}
+	}
+@media(min-width: 320px) {
+	.tablet,
+	.desktop {
+		display: none;
+	}
+}
+@media(min-width: 768px) {
+	.tablet {
+		display: block;
+	}
+	.mobile,
+	.desktop {
+		display: none;
+	}
+}
+@media(min-width: 1024px) {
+	.mobile,
+	.tablet {
+		display: none;
+	}
+	.desktop {
+		display: block;
+	}
+}
