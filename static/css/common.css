@@ -1,0 +1,15 @@
+body {
+	margin: 0;
+}
+
+/* beigin layout */
+.head,
+.foot {
+	padding: 10px;
+	background-color: #ccc;
+}
+.container .content {
+	min-height: 400px;
+	background-color: #ddd;
+}
+/* end layout */
