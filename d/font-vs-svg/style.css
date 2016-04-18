@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('fonts/icomoon.eot?nr64ds');
+    src:    url('fonts/icomoon.eot?nr64ds#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?nr64ds') format('truetype'),
+        url('fonts/icomoon.woff?nr64ds') format('woff'),
+        url('fonts/icomoon.svg?nr64ds#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-animals:before {
+    content: "\e900";
+}
+.icon-computer:before {
+    content: "\e901";
+}
+.icon-danger:before {
+    content: "\e902";
+}
+.icon-medical:before {
+    content: "\e903";
+}
+.icon-people:before {
+    content: "\e904";
+}
+.icon-security:before {
+    content: "\e905";
+}
+.icon-square:before {
+    content: "\e906";
+}
+.icon-technology:before {
+    content: "\e907";
+}
+.icon-technology-1:before {
+    content: "\e908";
+}
+.icon-technology-2:before {
+    content: "\e909";
+}
+.icon-technology-3:before {
+    content: "\e90a";
+}
+.icon-technology-4:before {
+    content: "\e90b";
+}
+.icon-technology-5:before {
+    content: "\e90c";
+}
+.icon-technology-6:before {
+    content: "\e90d";
+}
+.icon-tool:before {
+    content: "\e90e";
+}
+.icon-tool-1:before {
+    content: "\e90f";
+}
+.icon-tool-2:before {
+    content: "\e910";
+}
+.icon-tool-3:before {
+    content: "\e911";
+}
+.icon-tool-4:before {
+    content: "\e912";
+}
+.icon-weapon:before {
+    content: "\e913";
+}
+
+.svg {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.svg:before {
+    width: 30px;
+    display: inline-block;
+    height: 30px;
+    content: "";
+}
+.svg-animals:before {
+    background: url(svg/animals.svg) no-repeat;
+}
+.svg-computer:before {
+    background: url(svg/computer.svg) no-repeat;
+}
+.svg-danger:before {
+    background: url(svg/danger.svg) no-repeat;
+}
+.svg-medical:before {
+    background: url(svg/medical.svg) no-repeat;
+}
+.svg-people:before {
+    background: url(svg/people.svg) no-repeat;
+}
+.svg-security:before {
+    background: url(svg/security.svg) no-repeat;
+}
+.svg-square:before {
+    background: url(svg/square.svg) no-repeat;
+}
+.svg-technology:before {
+    background: url(svg/technology.svg) no-repeat;
+}
+.svg-technology-1:before {
+    background: url(svg/technology-1.svg) no-repeat;
+}
+.svg-technology-2:before {
+    background: url(svg/technology-2.svg) no-repeat;
+}
+.svg-technology-3:before {
+    background: url(svg/technology-3.svg) no-repeat;
+}
+.svg-technology-4:before {
+    background: url(svg/technology-4.svg) no-repeat;
+}
+.svg-technology-5:before {
+    background: url(svg/technology-5.svg) no-repeat;
+}
+.svg-technology-6:before {
+    background: url(svg/technology-6.svg) no-repeat;
+}
+.svg-tool:before {
+    background: url(svg/tool.svg) no-repeat;
+}
+.svg-tool-1:before {
+    background: url(svg/tool-1.svg) no-repeat;
+}
+.svg-tool-2:before {
+    background: url(svg/tool-2.svg) no-repeat;
+}
+.svg-tool-3:before {
+    background: url(svg/tool-3.svg) no-repeat;
+}
+.svg-tool-4:before {
+    background: url(svg/tool-4.svg) no-repeat;
+}
+.svg-weapon:before {
+    background: url(svg/weapon.svg) no-repeat;
+}
