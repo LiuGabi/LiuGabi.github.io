@@ -18,7 +18,7 @@ body {
 	text-rendering: optimizeLegibility;
 	background: #fff;
 	font-size: 14px;
-	background-color: #ddd;
+	background-color: #eee;
 }
 ul {
 	list-style: none;
@@ -26,24 +26,4 @@ ul {
 a{
 	text-decoration: none;
 	color: #428bca;
-}
-.container {
-	padding: 10px;
-	max-width: 2000px;
-}
-.demo-list {
-	margin: 0 -5px;
-}
-.demo-list:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	overflow: hidden;
-}
-.demo-list li {
-	width: 300px;
-	margin: 0 5px;
-	float: left;
-	background: #fff;
 }
