@@ -45,16 +45,20 @@
 					option.sidebar.addClass('slide-in')
 					option.container.addClass('shift-right');
                 }
+
             },
             
             stop: function(){
+
 				switchStatus= false;
+                
 				option.container.removeClass('shift-right');
 				option.sidebar.removeClass('slide-in');
 
                 if (option.closefunction && typeof option.closefunction == 'function') {
                     option.closefunction.call();
-                }               
+                }   
+
             }
         }
 

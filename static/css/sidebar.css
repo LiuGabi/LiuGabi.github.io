@@ -5,7 +5,7 @@
 	width: 60px;
 	height: 100%;
 	box-shadow: 1px 0px 2px #615e5e;
-	background-color: #2e2d2b;
+	background-color: #eee;
     z-index: 200;
 
     -webkit-transform: translateX(-60px);
