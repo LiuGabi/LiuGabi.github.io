@@ -8,15 +8,45 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <link rel="stylesheet" href="static/css/default.css">
+<link rel="stylesheet" href="static/css/layout.css">
+<link rel="stylesheet" href="static/css/sidebar.css">
 <link rel="stylesheet" href="static/css/resume.css">
+<script src="static/js/jquery-1.11.1.min.js"></script>
+<script src="static/js/jquery.slider.js"></script>
 </head>
 <body>
-<div class="sidebar">
-	<div class="avatar">
-		<img src="static/images/icon/avatar.jpg">
+<div class="wrapper">
+
+	<div id="js-sidebar" class="sidebar">
+		<div class="avatar">
+			<img src="static/images/icon/avatar.jpg">
+		</div>
 	</div>
+
+	<header id="js-header" class="header">
+		<span id="js-toggle" class="toggle-sidebar">|||</span>
+	</header>
+
+	<div id="js-container" class="container">
+		container
+	</div>
+
+	<footer id="js-footer" class="footer">Footer</footer>
+
 </div>
-<div class="container">
-</div>
+<script>
+
+	$(document).ready(function(){
+		var slider = $(this).slider({
+			container: $("#js-container, #js-header, #js-footer"),
+			sidebar: $("#js-sidebar")
+		});
+
+		$("#js-toggle").click(function(){
+			slider.start();
+		});
+	});
+
+</script>
 </body>
 </html>
