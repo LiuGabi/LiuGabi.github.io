@@ -35,7 +35,7 @@
 					return;
 				}
 
-				switchStatus= true;
+				switchStatus = true;
 
 				if (option.statfunction && typeof option.statfunction == 'function') {
                     option.statfunction.call();
@@ -45,6 +45,15 @@
 					option.sidebar.addClass('slide-in')
 					option.container.addClass('shift-right');
                 }
+
+                if (option.cover) {
+                    option.wrapper.find("#js-cover").show();
+                }
+
+                option.wrapper.find("#js-cover").off('click MSPointerDown touchstart touchmove').on('click MSPointerDown touchstart touchmove', function(){
+                    slide.stop();
+                    return;
+                });
 
             },
             
@@ -57,7 +66,9 @@
 
                 if (option.closefunction && typeof option.closefunction == 'function') {
                     option.closefunction.call();
-                }   
+                }
+
+                option.wrapper.find("#js-cover").hide(); 
 
             }
         }

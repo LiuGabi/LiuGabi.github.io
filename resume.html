@@ -15,7 +15,7 @@
 <script src="static/js/jquery.slider.js"></script>
 </head>
 <body>
-<div class="wrapper">
+<div id="js-wrapper" class="wrapper">
 
 	<div id="js-sidebar" class="sidebar">
 		<div class="avatar">
@@ -32,14 +32,17 @@
 	</div>
 
 	<footer id="js-footer" class="footer">Footer</footer>
-
+	
+	<div id="js-cover" class="cover none"></div>
 </div>
 <script>
 
 	$(document).ready(function(){
 		var slider = $(this).slider({
+			wrapper: $("#js-wrapper"),
 			container: $("#js-container, #js-header, #js-footer"),
-			sidebar: $("#js-sidebar")
+			sidebar: $("#js-sidebar"),
+			cover: true
 		});
 
 		$("#js-toggle").click(function(){
