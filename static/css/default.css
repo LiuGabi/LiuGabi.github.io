@@ -30,3 +30,13 @@ a{
 .none {
 	display: none;
 }
+
+.clearfix {
+	zoom:1;
+}
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}

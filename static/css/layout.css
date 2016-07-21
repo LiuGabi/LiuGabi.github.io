@@ -1,7 +1,6 @@
 .wrapper {
     overflow-x: hidden;
 }
-.container {}
 .header,
 .container,
 .footer {
@@ -12,23 +11,61 @@
     transition: .6s;
 }
 
-.container,
-.header,
-.footer {
-    padding: 10px;
+
+
+.container {
+    padding: 20px 10px;
 }
+
+
 
 .header {
-    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+    background-color: #333333;
 }
-
-.footer {
-    font-size: 12px;
-    border-top: 1px solid #ddd;
+.header .inner {
+    width: 1024px;
+    margin: 0 auto;
 }
 
 .header .toggle-sidebar {
-    padding: 10px;
+    padding: 5px;
+    display: none;
+    cursor: pointer;
+    color: #fff;
+}
+.nav li {
+    float: left;
+}
+.nav li a {
+    display: block;
+    margin-right: 20px;
+    padding: 17px 0px;
+    color: #999;
+}
+.nav li a:hover {
+    color: #ddd;
+}
+
+.full-tab {
+   border-bottom: 1px solid #ddd; 
+}
+.full-tab ul {
+    text-align: center;
+}
+.full-tab ul li {
     display: inline-block;
-    background-color: #ddd;
+}
+.full-tab ul li a {
+    display: block;
+    padding: 10px;
+}
+
+
+
+
+.footer {
+    padding: 20px 10px;
+    font-size: 12px;
+    border-top: 1px solid #ddd;
 }
