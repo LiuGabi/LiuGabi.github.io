@@ -12,11 +12,13 @@
 <body>
 <div id="js-wrapper" class="wrapper">
 	
+	<%- include('include/sidebar'); %>
+	
 	<%- include('include/header'); %>
 	
 	<div id="js-container" class="container">
 
-		<%= layout %>
+		<%= include(layout) %>
 	
 	</div>
 

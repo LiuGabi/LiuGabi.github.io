@@ -1,15 +1,15 @@
 var express = require("express");
 
-var router = express.Router();
+var shots = express.Router();
 
-router.get('/shots', function(req, res) {
+shots.get('/shots', function(req, res) {
 
 	res.render('layout/default', {
 
-		layout: 'shots/index'
+		layout: '../shots/index'
 
 	});
 
 });
 
-module.exports = router;
+module.exports = shots;

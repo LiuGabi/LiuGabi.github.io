@@ -1,16 +1,15 @@
 var express = require("express");
 
-var router = express.Router();
+var defaults = express.Router();
 
-router.get('/', function(req, res) {
+defaults.get('/', function(req, res) {
 
 	res.render('layout/default', {
 
-		title: 'export',
-		layout: 'home/index'
+		layout: '../home/index'
 
 	});
 
 });
 
-module.exports = router;
+module.exports = defaults;

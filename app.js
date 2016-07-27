@@ -1,10 +1,14 @@
 var express      = require('express');
 var path         = require('path');
-var favicon      = require('serve-favicon');
+// var favicon      = require('serve-favicon');
 var bodyParser   = require('body-parser');
 
 var defaults       = require('./routes/defaults');
 var shots       = require('./routes/shots');
+var discover       = require('./routes/discover');
+var stories       = require('./routes/stories');
+var now       = require('./routes/now');
+
 var app          = express();
 
 app.set('views', path.join(__dirname, 'views'));
@@ -18,6 +22,9 @@ app.use(express.static(path.join(__dirname, 'static')));
 
 app.use('/', defaults);
 app.use('/', shots);
+app.use('/', discover);
+app.use('/', stories);
+app.use('/', now);
 
 app.use(function (req, res, next) {
     var err    = new Error('Not Found');
