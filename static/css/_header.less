@@ -1,4 +1,7 @@
 .header {
+    padding: 0 10px;
+    background-color: #333333;
+
     -webkit-transition: .6s;
     -moz-transition: .6s;
     -ms-transition: .6s;
@@ -6,12 +9,8 @@
     transition: .6s;
 }
 
-.header {
-    padding: 0 10px;
-    background-color: #333333;
-}
 .header .inner {
-    width: 1024px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -34,8 +33,18 @@
     color: #ddd;
 }
 
+.sub-nav {
+    padding: 30px;
+    font-size: 16px;
+    text-align: center;;
+    color: #fff;
+    background-color: #444;
+}
+
 .full-tab {
-   border-bottom: 1px solid #ddd; 
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd; 
 }
 .full-tab ul {
     text-align: center;
@@ -46,4 +55,10 @@
 .full-tab ul li a {
     display: block;
     padding: 10px;
+}
+.full-tab .arrange {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
 }

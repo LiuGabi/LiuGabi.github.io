@@ -89,18 +89,16 @@ a {
   color: #428bca;
 }
 .header {
+  padding: 0 10px;
+  background-color: #333333;
   -webkit-transition: .6s;
   -moz-transition: .6s;
   -ms-transition: .6s;
   -o-transition: .6s;
   transition: .6s;
 }
-.header {
-  padding: 0 10px;
-  background-color: #333333;
-}
 .header .inner {
-  width: 1024px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .header .toggle-sidebar {
@@ -121,7 +119,16 @@ a {
 .nav li a:hover {
   color: #ddd;
 }
+.sub-nav {
+  padding: 30px;
+  font-size: 16px;
+  text-align: center;
+  color: #fff;
+  background-color: #444;
+}
 .full-tab {
+  position: relative;
+  background-color: #fff;
   border-bottom: 1px solid #ddd;
 }
 .full-tab ul {
@@ -134,20 +141,20 @@ a {
   display: block;
   padding: 10px;
 }
+.full-tab .arrange {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
 .wrapper {
+  background-color: #f4f4f4;
   overflow-x: hidden;
 }
 .container {
-  -webkit-transition: .6s;
-  -moz-transition: .6s;
-  -ms-transition: .6s;
-  -o-transition: .6s;
-  transition: .6s;
-}
-.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px 10px;
-}
-.footer {
   -webkit-transition: .6s;
   -moz-transition: .6s;
   -ms-transition: .6s;
@@ -156,8 +163,14 @@ a {
 }
 .footer {
   padding: 20px 10px;
-  font-size: 12px;
   border-top: 1px solid #ddd;
+  font-size: 12px;
+  background-color: #fff;
+  -webkit-transition: .6s;
+  -moz-transition: .6s;
+  -ms-transition: .6s;
+  -o-transition: .6s;
+  transition: .6s;
 }
 .sidebar {
   position: absolute;
@@ -168,11 +181,11 @@ a {
   box-shadow: 1px 0px 2px #615e5e;
   background-color: #81C2D6;
   z-index: 200;
-  -webkit-transform: translateX(-60px);
-  -moz-transform: translateX(-60px);
-  -ms-transform: translateX(-60px);
-  -o-transform: translateX(-60px);
-  transform: translateX(-60px);
+  -webkit-transform: translateX(-62px);
+  -moz-transform: translateX(-62px);
+  -ms-transform: translateX(-62px);
+  -o-transform: translateX(-62px);
+  transform: translateX(-62px);
   -webkit-transition: .6s;
   -moz-transition: .6s;
   -ms-transition: .6s;
@@ -203,11 +216,11 @@ a {
   transform: translateX(0) !important;
 }
 .shift-right {
-  -webkit-transform: translateX(60px);
-  -moz-transform: translateX(60px);
-  -ms-transform: translateX(60px);
-  -o-transform: translateX(60px);
-  transform: translateX(60px);
+  -webkit-transform: translateX(62px);
+  -moz-transform: translateX(62px);
+  -ms-transform: translateX(62px);
+  -o-transform: translateX(62px);
+  transform: translateX(62px);
   -webkit-transition: .6s;
   -moz-transition: .6s;
   -ms-transition: .6s;

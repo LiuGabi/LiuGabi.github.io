@@ -6,19 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>Gabi - Show and tell for coder</title>
 <link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href='<%- css %>'>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/jquery.slider.js"></script>
 </head>
 <body>
 <div id="js-wrapper" class="wrapper">
-	
 	<%- include('include/sidebar'); %>
 	
 	<%- include('include/header'); %>
 	
 	<div id="js-container" class="container">
 
-		<%= include(layout) %>
+		<%- include(layout) %>
 	
 	</div>
 
