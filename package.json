@@ -12,6 +12,7 @@
     "debug": "latest",
     "serve-favicon": "latest",
     "body-parser": "latest",
-    "ejs": "latest"
+    "ejs": "latest",
+    "mongodb": "latest"
   }
 }
