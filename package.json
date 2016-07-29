@@ -13,6 +13,6 @@
     "serve-favicon": "latest",
     "body-parser": "latest",
     "ejs": "latest",
-    "mongodb": "latest"
+    "mongoose": "latest"
   }
 }
