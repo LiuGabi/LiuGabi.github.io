@@ -6,51 +6,61 @@
 			<p>Useful More</p>
 		</li>
 		
-		<% for(var i = 0 ; i < 5; i++) { %>
-			<li>
+		<% for(var i=0; i<item.length; i++) {%>  
+		    <li>
 				<div class="pic">
-					<img src="images/list/car.jpg" />
+					<img src="images/list/<%= item[i].pic %>" />
 				</div>
 			</li>
-		<% } %>
+		<% } %>  
 
 	</ul>
+
 	<ul class="item">
 		
-		<% for(var i = 0 ; i < 5; i++) { %>
-			<li>
+		<% for(var i=0; i<item.length; i++) {%>  
+		    <li>
 				<div class="pic">
-					<img src="images/list/bottle.jpg" />
+					<img src="images/list/<%= item[i].pic %>" />
 				</div>
 			</li>
-		<% } %>
+		<% } %>  
+
+	</ul>
+
+	<ul class="item">
 		
-	</ul>
-	<ul class="item">
-		<% for(var i = 0 ; i < 5; i++) { %>
-			<li>
+		<% for(var i=0; i<item.length; i++) {%>  
+		    <li>
 				<div class="pic">
-					<img src="images/list/email.jpg" />
+					<img src="images/list/<%= item[i].pic %>" />
 				</div>
 			</li>
-		<% } %>
+		<% } %>  
+
 	</ul>
+
 	<ul class="item">
-		<% for(var i = 0 ; i < 5; i++) { %>
-			<li>
+		
+		<% for(var i=0; i<item.length; i++) {%>  
+		    <li>
 				<div class="pic">
-					<img src="images/list/series.jpg" />
+					<img src="images/list/<%= item[i].pic %>" />
 				</div>
 			</li>
-		<% } %>
+		<% } %>  
+
 	</ul>
+
 	<ul class="item">
-		<% for(var i = 0 ; i < 5; i++) { %>
-			<li>
+		
+		<% for(var i=0; i<item.length; i++) {%>  
+		    <li>
 				<div class="pic">
-					<img src="images/list/wave.jpg" />
+					<img src="images/list/<%= item[i].pic %>" />
 				</div>
 			</li>
-		<% } %>
+		<% } %>  
+
 	</ul>
 </div>

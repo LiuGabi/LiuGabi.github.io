@@ -107,6 +107,11 @@ a {
   cursor: pointer;
   color: #fff;
 }
+@media (max-width: 500px) {
+  .header .toggle-sidebar {
+    display: inline-block;
+  }
+}
 .nav li {
   float: left;
 }
