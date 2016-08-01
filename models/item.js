@@ -20,7 +20,7 @@ var item = mongoose.model('item', itemScheMa);
 
 var query =  item.find(query, "pic", function(err, docs) {
 
-	console.log(docs[0]);
+	console.log(docs.length);
 
 });
 
