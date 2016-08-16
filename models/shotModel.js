@@ -5,7 +5,7 @@ var database = require("../models/dbconnect");
 var Schema = mongoose.Schema;
 
 var shotSchema = new Schema({
-	itemId: String,
+	id: String,
 	love: Number,
 	pic: String 
 });

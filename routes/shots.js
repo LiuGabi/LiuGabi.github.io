@@ -35,10 +35,10 @@ shots.get('/shots', function(req, res) {
 
 	// shotModel.update(love, { love: '' }, options, callback);
 
-	var condiction = {_id: req.query.id},
-        option = {$set: {love: req.query.count}};
+	// var condiction = {_id: req.query.id},
+ //        option = {$set: {love: req.query.count}};
 
-    	shotModel.update({_id: req.query.id}, { $set: { love: req.query.count } } }, callback);
+ //    	shotModel.update({_id: req.query.id}, { $set: { love: req.query.count } } }, callback);
 
 
 });
