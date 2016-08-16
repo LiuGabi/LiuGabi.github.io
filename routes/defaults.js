@@ -1,29 +1,29 @@
 var express = require("express");
 var defaults = express.Router();
 
-var itemModel = require('../models/itemModel');
+// var itemModel = require('../models/itemModel');
 
 defaults.get('/', function(req, res) {
 
-	var query =  itemModel.find({}, 'pic', function(err, results) {
+	// var query =  itemModel.find({}, 'pic', function(err, results) {
 
-		if (err) {
+	// 	if (err) {
 
-			console.log(err);
+	// 		console.log(err);
 
-		} else {
+	// 	} else {
 
-			res.render('layout/default', {
+	// 		res.render('layout/default', {
 
-				css: 'css/home.css',
-				layout: '../home/index',
-				item: results
+	// 			css: 'css/home.css',
+	// 			layout: '../home/index',
+	// 			item: results
 
-			});
+	// 		});
 
-		}
+	// 	}
 
-	});	
+	// });	
 
 });
 

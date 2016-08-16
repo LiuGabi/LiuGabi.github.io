@@ -4,12 +4,13 @@ var database = require("../models/dbconnect");
 
 var Schema = mongoose.Schema;
 
-var itemSchema = new Schema({
-	id: String,
+var shotSchema = new Schema({
+	itemId: String,
+	love: Number,
 	pic: String 
 });
 
-var itemModel = mongoose.model('Item', itemSchema);
+var shotModel = mongoose.model('Shot', shotSchema);
 
 // test database is connected
 // var db = mongoose.connection;
@@ -18,4 +19,4 @@ var itemModel = mongoose.model('Item', itemSchema);
 // 	console.log('We are connected.');
 // });
 
-module.exports = itemModel;
+module.exports = shotModel;
