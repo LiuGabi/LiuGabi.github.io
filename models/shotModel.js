@@ -7,7 +7,10 @@ var Schema = mongoose.Schema;
 var shotSchema = new Schema({
 	id: Number,
 	love: Number,
-	pic: String 
+	pic: String,
+	title: String,
+	content: String,
+	time: Date
 });
 
 var shotModel = mongoose.model('Shot', shotSchema);

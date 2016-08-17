@@ -17,9 +17,9 @@
 
 						<a href="#">
 							<div class="brief">
-									<span class="title">111</span>
-									<p>222</p>
-									<span class="time">2 hours ago</span>
+									<span class="title"><%= item[i].title %></span>
+									<p><%= item[i].content %></p>
+									<span class="time"><%= item[i].time %></span>
 							</div>
 						</a>
 					</div>
@@ -45,21 +45,27 @@
 		$(".js-like").click(function() {
 
 			var count = parseInt($(".js-count").html()) + 1;
+
+			$(".js-count").html(count);
+
 			var dataId = $(this).attr("dataId");
 
 			$.ajax({
 	
-	            type : 'get',
+	            type : 'post',
 	            context: $(this),
 	            dataType:'json',
 	            data: {
 	            	id: dataId,
 	            	count: count
+	            },
+	            success: function(success) {
+	            	console.log('message');
+	            	$(this).addClass("liked");
+	            },
+	            error: function(error) {
+	            	console.log('error');
 	            }
-
-			}).done(function() {
-
-				$(this).addClass("liked");
 
 			});
 

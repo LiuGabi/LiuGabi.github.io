@@ -9,6 +9,9 @@ shots.get('/shots', function(req, res) {
 
 	var query =  shotModel.find({}, function(err, results) {
 
+		console.log(results[0].time);
+		console.log(results[0].pic);
+
 		if (err) {
 
 			console.log(err);
@@ -27,9 +30,14 @@ shots.get('/shots', function(req, res) {
 
 	});
 
+});
 
-	var where = {id: req.query.id},
-    option = {$set: {love: req.query.count}};
+
+// Update love data
+shots.post('/shots', function(req, res) {
+	
+	var where = {id: req.body.id},
+    option = {$set: {love: req.body.count}};
 
     shotModel.update(where, option, function(err) {
 
@@ -37,15 +45,20 @@ shots.get('/shots', function(req, res) {
 
     		console.log('update error');
 
+    		res.json({error: "error"});
+
     	} else {
 
-    		console.log('update success');
+    		console.log('update success:');
+
+    		res.json({success: "success"});
 
     	}
 
     });
 
-
 });
+
+
 
 module.exports = shots;
