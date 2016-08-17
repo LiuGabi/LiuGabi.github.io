@@ -7,10 +7,6 @@ var shotModel = require('../models/shotModel');
 
 shots.get('/shots', function(req, res) {
 
-	// console.log(req.params.count);
-
-	console.log(req.query.count);
-
 	var query =  shotModel.find({}, function(err, results) {
 
 		if (err) {
@@ -29,16 +25,25 @@ shots.get('/shots', function(req, res) {
 
 		}
 
-	});	
+	});
 
-	// var love = { love: req.query.count };
 
-	// shotModel.update(love, { love: '' }, options, callback);
+	var where = {id: req.query.id},
+    option = {$set: {love: req.query.count}};
 
-	// var condiction = {_id: req.query.id},
- //        option = {$set: {love: req.query.count}};
+    shotModel.update(where, option, function(err) {
 
- //    	shotModel.update({_id: req.query.id}, { $set: { love: req.query.count } } }, callback);
+    	if (err) {
+
+    		console.log('update error');
+
+    	} else {
+
+    		console.log('update success');
+
+    	}
+
+    });
 
 
 });
