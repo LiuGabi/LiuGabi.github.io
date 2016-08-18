@@ -1,6 +1,8 @@
 var express = require("express");
 var shots = express.Router();
 
+var moment = require("moment");
+
 var shotModel = require('../models/shotModel');
 
 
@@ -9,14 +11,23 @@ shots.get('/shots', function(req, res) {
 
 	var query =  shotModel.find({}, function(err, results) {
 
-		console.log(results[0].time);
-		console.log(results[0].pic);
+
+
 
 		if (err) {
 
 			console.log(err);
 
 		} else {
+
+
+			for(var i = 0; i < results.length; i++) {
+
+				results[i].time = moment(results[i].time).format("MMM Do YY");
+
+				console.log(moment(results[i].time).format("MMM Do YY"));
+
+			}
 
 			res.render('layout/default', {
 
