@@ -11,7 +11,26 @@ shots.get('/shots', function(req, res) {
 
 	var query =  shotModel.find({}, function(err, results) {
 
+		var handleResults = [];
 
+		for(var i = 0; i < results.length; i++) {
+
+			results[i].time = moment(results[i].time).endOf('day').fromNow();
+
+			console.log(results[i].time);
+
+			handleResults.push({
+
+				id: results[i].id,
+				love: results[i].love,
+				pic: results[i].pic,
+				title: results[i].title,
+				content: results[i].content,
+				time: moment(results[i].time).endOf('day').fromNow()
+
+			});
+
+		}
 
 
 		if (err) {
@@ -20,20 +39,11 @@ shots.get('/shots', function(req, res) {
 
 		} else {
 
-
-			for(var i = 0; i < results.length; i++) {
-
-				results[i].time = moment(results[i].time).format("MMM Do YY");
-
-				console.log(moment(results[i].time).format("MMM Do YY"));
-
-			}
-
 			res.render('layout/default', {
 
 				css: 'css/shots.css',
 				layout: '../shots/index',
-				item: results
+				item: handleResults
 
 			});
 

@@ -44,9 +44,9 @@
 		
 		$(".js-like").click(function() {
 
-			var count = parseInt($(".js-count").html()) + 1;
+			var count = parseInt($(this).children(".js-count").html()) + 1;
 
-			$(".js-count").html(count);
+			$(this).children(".js-count").html(count);
 
 			var dataId = $(this).attr("dataId");
 
@@ -60,7 +60,6 @@
 	            	count: count
 	            },
 	            success: function(success) {
-	            	console.log('message');
 	            	$(this).addClass("liked");
 	            },
 	            error: function(error) {
