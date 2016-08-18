@@ -15,10 +15,6 @@ shots.get('/shots', function(req, res) {
 
 		for(var i = 0; i < results.length; i++) {
 
-			results[i].time = moment(results[i].time).endOf('day').fromNow();
-
-			console.log(results[i].time);
-
 			handleResults.push({
 
 				id: results[i].id,
