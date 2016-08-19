@@ -15,7 +15,7 @@
 					<div class="pic">
 						<img src="<%= item[i].pic %>">
 
-						<a href="#aa">
+						<a class="js-detail" href="#aa">
 							<div class="brief">
 									<span class="title"><%= item[i].title %></span>
 									<p><%= item[i].content %></p>
@@ -38,7 +38,8 @@
 
 </div>
 
-<div class="popup overlay">
+<div class="js-popup popup overlay none">
+	<div class="js-close close">Close</div>
 	<div class="content">1</div>
 </div>
 
@@ -71,6 +72,18 @@
 	            }
 
 			});
+
+		});
+
+		$(".js-detail").click(function() {
+
+			$(".js-popup").show();
+
+		});
+
+		$(".js-close").click(function() {
+
+			$(".js-popup").hide();
 
 		});
 

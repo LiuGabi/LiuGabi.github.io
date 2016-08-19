@@ -270,11 +270,19 @@ a {
   -webkit-overflow-scrolling: touch;
   background-color: rgba(30, 30, 30, 0.9);
 }
+.popup .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+  background-color: #fff;
+  cursor: pointer;
+}
 .popup .content {
   max-width: 900px;
   min-height: 100px;
   margin: 50px auto;
-  padding: 15px;
-  border-radius: 5px;
+  padding: 40px 90px;
+  border-radius: 3px;
   background-color: #fff;
 }
