@@ -14,8 +14,7 @@
     "body-parser": "latest",
     "ejs": "latest",
     "mongoose": "latest",
-    "moment": "latest",
+    "moment": "latest"
 
-    "@angular/common": "latest"
   }
 }

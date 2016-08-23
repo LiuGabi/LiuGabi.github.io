@@ -3,11 +3,12 @@ var path         = require('path');
 // var favicon      = require('serve-favicon');
 var bodyParser   = require('body-parser');
 
-var defaults       = require('./routes/defaults');
+var home       = require('./routes/home');
 var shots       = require('./routes/shots');
 var discover       = require('./routes/discover');
 var stories       = require('./routes/stories');
 var now       = require('./routes/now');
+var user       = require('./routes/user');
 
 var app          = express();
 
@@ -20,11 +21,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, 'static')));
 
-app.use('/', defaults);
+app.use('/', home);
 app.use('/', shots);
 app.use('/', discover);
 app.use('/', stories);
 app.use('/', now);
+app.use('/', user);
 
 app.use(function (req, res, next) {
     var err    = new Error('Not Found');
