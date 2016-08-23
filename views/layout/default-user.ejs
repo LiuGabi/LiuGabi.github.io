@@ -6,10 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>User</title>
 <link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/default-user.css">
 <link rel="stylesheet" href='<%- css %>'>
 </head>
 <body>
-	<%- include(layout) %>
+	<div class="wrapper">
+		<%- include('include/user-sidebar'); %>
+
+		<div class="container">
+			<%- include(layout) %>
+		</div>
+
+		<%- include('include/user-sidebar-right'); %>
+	</div>
 </body>
 </html>
