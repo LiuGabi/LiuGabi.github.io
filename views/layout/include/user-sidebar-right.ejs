@@ -4,9 +4,13 @@
 		Shot
 	</div>
 
-	<div class="add">
+	<div id="js-add" class="add">
 		<div class="title">
-			<input type="text" name="" placeholder="Title">
+			<input class="js-title" type="text" placeholder="Title">
+		</div>
+
+		<div class="illustrate">
+			Drag photo to here
 		</div>
 		
 		<div class="tool">
@@ -24,7 +28,48 @@
 			</span>
 		</div>
 		
-		<textarea placeholder="Content"></textarea>
+		<textarea class="js-content" placeholder="Content"></textarea>
+
+		<div>
+			<button class="js-add-btn">Add</button>
+		</div>
 	</div>
 
 </div>
+
+<script>
+	
+$(document).ready(function() {
+
+	$("#js-add .js-add-btn").click(function(e) {
+
+		var title = $("#js-add .js-title").val();
+		var content = $("#js-add .js-content").val();
+
+		console.log(title);
+
+		$.ajax({
+	
+            type : 'post',
+            context: $(this),
+            dataType:'json',
+            data: {
+            	title: title,
+            	content: content
+            },
+            success: function(success) {
+
+            },
+            error: function(error) {
+
+            	console.log('error');
+
+            }
+
+		});
+
+	});
+
+});
+
+</script>
