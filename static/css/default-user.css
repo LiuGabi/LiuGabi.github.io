@@ -128,6 +128,7 @@ textarea:focus {
   border-color: #fcd340;
 }
 textarea {
+  min-height: 150px;
   resize: none;
 }
 .sidebar {
@@ -225,5 +226,9 @@ textarea {
   margin-bottom: 15px;
 }
 .sidebar-right .tool {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+}
+.sidebar-right .tool span {
+  padding: 15px;
+  cursor: pointer;
 }
