@@ -8,7 +8,7 @@ var shots       = require('./routes/shots');
 var discover       = require('./routes/discover');
 var stories       = require('./routes/stories');
 var now       = require('./routes/now');
-var user       = require('./routes/user');
+var system       = require('./routes/system');
 
 var app          = express();
 
@@ -26,7 +26,7 @@ app.use('/', shots);
 app.use('/', discover);
 app.use('/', stories);
 app.use('/', now);
-app.use('/', user);
+app.use('/', system);
 
 app.use(function (req, res, next) {
     var err    = new Error('Not Found');

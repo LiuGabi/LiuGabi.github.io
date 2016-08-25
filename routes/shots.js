@@ -3,7 +3,7 @@ var shots = express.Router();
 
 var moment = require("moment");
 
-var shotModel = require('../models/shotModel');
+var shotModel = require('../models/articleModel');
 
 
 
