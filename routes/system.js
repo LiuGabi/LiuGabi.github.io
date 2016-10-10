@@ -15,7 +15,7 @@ system.get('/system', function(req, res) {
 
 system.post('/system', function(req, res) {
 	
-	var data = {id: 55, love: 22, pic: "66", title: req.body.title, content: req.body.content, time: "2016-10-20"};
+	var data = {id: 55, love: 0, pic: "66", title: req.body.title, content: req.body.content, time: "2016-10-20"};
 
 	var p = new systemModel(data);
 
@@ -24,6 +24,10 @@ system.post('/system', function(req, res) {
     p.save(function(err) {
     	console.log(err);
     });
+
+    // upload file
+
+    
 
 });
 
