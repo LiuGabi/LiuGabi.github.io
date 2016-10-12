@@ -39,7 +39,7 @@ shots.get('/shots', function(req, res) {
 
 				css: 'css/shots.css',
 				layout: '../shots/index',
-				item: handleResults
+				item: 0
 
 			});
 
