@@ -9,31 +9,7 @@
 			</div>
 		</li>
 		
-		<% for(var i=0; i<item.length; i++) { %>  
-		    <li>
-		    	<div class="wrapper">
-					<div class="pic">
-						<img src="<%= item[i].pic %>">
-
-						<a class="js-detail" href="#aa">
-							<div class="brief">
-									<span class="title"><%= item[i].title %></span>
-									<p><%= item[i].content %></p>
-									<span class="time"><%= item[i].time %></span>
-							</div>
-						</a>
-					</div>
-
-					<div class="extras clearfix">
-						<span class="js-like" dataId="<%= item[i].id %>">
-							<i class="fa fa-heart" aria-hidden="true"></i> 
-							<em class="js-count"><%= item[i].love %></em>
-						</span>
-						<span><i class="fa fa-eye" aria-hidden="true"></i></span>
-					</div>
-				</div>
-			</li>
-		<% } %>  
+		
 	</ul>
 
 </div>
@@ -43,50 +19,50 @@
 	<div class="content">1</div>
 </div>
 
-<script>
+// <script>
 
-	$(document).ready(function() {
+// 	$(document).ready(function() {
 		
-		$(".js-like").click(function() {
+// 		$(".js-like").click(function() {
 
-			var count = parseInt($(this).children(".js-count").html()) + 1;
+// 			var count = parseInt($(this).children(".js-count").html()) + 1;
 
-			$(this).children(".js-count").html(count);
+// 			$(this).children(".js-count").html(count);
 
-			var dataId = $(this).attr("dataId");
+// 			var dataId = $(this).attr("dataId");
 
-			$.ajax({
+// 			$.ajax({
 	
-	            type : 'post',
-	            context: $(this),
-	            dataType:'json',
-	            data: {
-	            	id: dataId,
-	            	count: count
-	            },
-	            success: function(success) {
-	            	$(this).addClass("liked");
-	            },
-	            error: function(error) {
-	            	console.log('error');
-	            }
+// 	            type : 'post',
+// 	            context: $(this),
+// 	            dataType:'json',
+// 	            data: {
+// 	            	id: dataId,
+// 	            	count: count
+// 	            },
+// 	            success: function(success) {
+// 	            	$(this).addClass("liked");
+// 	            },
+// 	            error: function(error) {
+// 	            	console.log('error');
+// 	            }
 
-			});
+// 			});
 
-		});
+// 		});
 
-		$(".js-detail").click(function() {
+// 		$(".js-detail").click(function() {
 
-			$(".js-popup").show();
+// 			$(".js-popup").show();
 
-		});
+// 		});
 
-		$(".js-close").click(function() {
+// 		$(".js-close").click(function() {
 
-			$(".js-popup").hide();
+// 			$(".js-popup").hide();
 
-		});
+// 		});
 
-	});
+// 	});
 
-</script>
+// </script>
