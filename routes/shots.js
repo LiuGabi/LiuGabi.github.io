@@ -33,13 +33,15 @@ shots.get('/shots', function(req, res) {
 
 			console.log(err);
 
+			console.log("Gabi");
+
 		} else {
 
 			res.render('layout/default', {
 
 				css: 'css/shots.css',
 				layout: '../shots/index',
-				item: 0
+				item: handleResults
 
 			});
 
