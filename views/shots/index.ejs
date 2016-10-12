@@ -9,7 +9,11 @@
 			</div>
 		</li>
 		
-		
+		<% for(var i=0; i<item.length; i++) { %>  
+		    <li>
+		    	<img src="<%= item[i].pic %>">
+			</li>
+		<% } %>  
 	</ul>
 
 </div>
@@ -19,50 +23,50 @@
 	<div class="content">1</div>
 </div>
 
-// <script>
+<script>
 
-// 	$(document).ready(function() {
+	$(document).ready(function() {
 		
-// 		$(".js-like").click(function() {
+		$(".js-like").click(function() {
 
-// 			var count = parseInt($(this).children(".js-count").html()) + 1;
+			var count = parseInt($(this).children(".js-count").html()) + 1;
 
-// 			$(this).children(".js-count").html(count);
+			$(this).children(".js-count").html(count);
 
-// 			var dataId = $(this).attr("dataId");
+			var dataId = $(this).attr("dataId");
 
-// 			$.ajax({
+			$.ajax({
 	
-// 	            type : 'post',
-// 	            context: $(this),
-// 	            dataType:'json',
-// 	            data: {
-// 	            	id: dataId,
-// 	            	count: count
-// 	            },
-// 	            success: function(success) {
-// 	            	$(this).addClass("liked");
-// 	            },
-// 	            error: function(error) {
-// 	            	console.log('error');
-// 	            }
+	            type : 'post',
+	            context: $(this),
+	            dataType:'json',
+	            data: {
+	            	id: dataId,
+	            	count: count
+	            },
+	            success: function(success) {
+	            	$(this).addClass("liked");
+	            },
+	            error: function(error) {
+	            	console.log('error');
+	            }
 
-// 			});
+			});
 
-// 		});
+		});
 
-// 		$(".js-detail").click(function() {
+		$(".js-detail").click(function() {
 
-// 			$(".js-popup").show();
+			$(".js-popup").show();
 
-// 		});
+		});
 
-// 		$(".js-close").click(function() {
+		$(".js-close").click(function() {
 
-// 			$(".js-popup").hide();
+			$(".js-popup").hide();
 
-// 		});
+		});
 
-// 	});
+	});
 
-// </script>
+</script>
