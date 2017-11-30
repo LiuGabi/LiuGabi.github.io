@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Srcset | viewport</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+	<input type="file" accept="image/*" onchange="uploadPic(event)">
+</body>
+<script type="text/javascript">
+	function uploadPic(event) {
+		console.log(event.target.files[0])
+		alert(event.target.files[0].lastModifiedDate)
+	}
+</script>
+</html>
