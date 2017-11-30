@@ -12,12 +12,12 @@
 </style>
 </head>
 <body>
-	<input type="file" accept="image/*" onchange="uploadPic(event)">
+	<input type="file" accept="image/*" capture="camera" onchange="uploadPic(event)">
 </body>
 <script type="text/javascript">
 	function uploadPic(event) {
 		console.log(event.target.files[0])
-		alert(event.target.files[0])
+		alert(JSON.stringify(event.target.files[0]))
 	}
 </script>
 </html>
