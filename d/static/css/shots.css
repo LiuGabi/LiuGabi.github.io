@@ -1,0 +1,120 @@
+.shots {
+    
+}
+
+.item {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+@media(max-width: 768px) {
+    .item {
+        width: 50%;
+    }
+}
+
+.item li {
+    float: left;
+    width: 20%;
+
+    margin-bottom: 20px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.item .wrapper {
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    background-color: #fff;
+}
+
+.item .pic {
+    position: relative;
+    height: 0;
+    padding-bottom: 83.337%;
+    overflow: hidden;
+}
+
+.item .pic img {
+    display: block;
+    max-width: 100%;
+}
+
+.item .pic a {
+    display: block;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s;
+}
+
+.item .pic a:hover {
+    opacity: 1;
+}
+
+.item .pic .brief {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.item .pic .brief .title {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    color: #000;
+}
+.item .pic .brief p {
+    font-size: 12px;
+    color: #908b8b;
+}
+.item .pic .brief .time {
+    position: absolute;
+    bottom: 5px;
+    color: #908b8b;
+    font-size: 12px;
+}
+
+.item .extras {
+    color: #908b8b;
+}
+
+.item .extras span {
+    float: right;
+    margin-left: 15px;
+    padding-top: 10px;
+
+    cursor: pointer;
+}
+.item .extras span i {
+    transition: color 0.6s;
+}
+.item .extras span.liked i {
+    color: #ea4c89;
+}
+.item .extras span em {
+    font-style: normal;
+}
+
+.item li.hot .wrapper {
+    padding: 0;
+    box-shadow: none;
+    background-color: #f4f4f4;
+}
+
+.item li.hot p {
+    margin-bottom: 11px;
+    padding: 15px 10px;
+    
+    text-align: center;
+    background-color: #fff;
+}
+.item li.hot p:last-child {
+    margin-bottom: 0;
+}
